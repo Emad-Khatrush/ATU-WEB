@@ -30,4 +30,4 @@ ATU - Önemli Kurallar
   ornek: home.html yanlış => home.ejs doğrudur </br>
   3- yeni bir dosya açmanız gerek yok size hazır bir ortam hazırladım, direct kod yazabilirsiniz</br>
   4- ayşegül /views/partails/navbar.ejs dosyası direct navigasyon tasarlayacaksın.</br>
-  5- gökay /views/auth/login.ejs dosyası direct gitiş sayfasını tasarlayacaksın.</br>
+  5- gökay /views/auth/login.ejs dosyası direct giriş sayfasını tasarlayacaksın.</br>
