@@ -39,7 +39,7 @@ form{
     width: 2000px;
     top:-10%;
     right: 48%;
-    background-image:linear-gradient(-45deg,#0072ff 0% , #1000ff 100%) ;
+    background-image:url(https://images.unsplash.com/photo-1615746363486-92cd8c5e0a90?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80) ;
     transform: translateY(-50%);
     border-radius: 50%;
 }
@@ -216,8 +216,12 @@ a:hover{
         justify-content: space-around;
         align-items: center;
 
+
     }
     .left-panel{
         grid-row:1 / 2;
+    }
+    .container::before{
+        display: none;
     }
 }
