@@ -5,92 +5,99 @@
             name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- define links -->
     <link rel="stylesheet" href="/css/signup.css">
     <!-- import Bootstrap 5-->
     <link rel="stylesheet" href="/sources/bootstrap.css">
-    <title>Kayıt Ol</title>
+    <title>SignUP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="/css/kayıtol.css">
 </head>
 <body>
-<div class="container">
+<div class="wrapper">
+    <div class="title-text">
 
-    <div class="forms-container">
+        <div class="title login"> <i class="fas fa-user"></i>
+            Kullanıcı Kayıt</div>
+        <div class="title signup"><i class="fas fa-store"></i>
+            </i>Mağaza Kayıt</div>
+    </div>
+    <div class="form-container">
+        <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked>
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login">Kullanıcı</label>
+            <label for="signup" class="slide signup">Mağaza</label>
+            <div class="slider-tab">
+            </div>
+        </div>
+        <div class="form-inner">
+            <form action="#" class="login">
 
-        <!--KULLANICI KAYIT-->
-
-        <div class="signup">
-
-            <form action="" class="sign-up-form">
-
-                <h2 class="title">Kayıt Ol </h2>
-                <img src="/assets/images/image/undraw_profile_pic_ic5t (1).png" alt="" width="150px">
-
-                <div class="input-field">
+                <div class="field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Ad-Soyad">
+                    <input type="text" placeholder="Kullanıcı Adı" required>
                 </div>
 
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Kullanıcı Adı">
-                </div>
-
-                <div class="input-field">
+                <div class="field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Mail Adresi">
+                    <input type="email" placeholder="Mail Adresi" required>
                 </div>
 
-                <div class="input-field">
-                    <i class="fas fa-phone-alt"></i>
-                    <input type="tel" placeholder="Telefon Numarası">
-                </div>
+                <div class="field">
 
-                <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Şifre">
+                    <input type="password" placeholder="Şifre" required>
+                </div>
+                <div class="field">
+
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Şifre Tekrar" required>
                 </div>
 
 
 
+                <input type="submit" class="btnup solid" value="Kaydol">
 
-                <input type="submit" class="btn solid" value="Kaydol">
-                <p class="social-text">Veya Sosyal Medyayla Kaydolun</p>
-
-                <div class="social-media">
-
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-facebook-f"></i></a>
-
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-twitter"></i></a>
-
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-instagram"></i></a>
-
-                    <a href="#" class="social-icon">
-                        <i class="far fa-envelope"></i></a>
+            </form>
+            <form action="#" class="signup">
+                <div class="field">
+                    <i class="fas fa-store"></i>
+                    <input type="text" placeholder="Mağaza Adı" required>
+                </div>
+                <div class="field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Kullanıcı Adı" required>
                 </div>
 
+                <div class="field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Mail Adresi" required>
+                </div>
 
+                <div class="field">
+
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Şifre" required>
+                </div>
+                <div class="field">
+
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Şifre Tekrar" required>
+                </div>
+                <div class="field">
+
+                    <i class="fas fa-home"></i>
+                    <textarea name="adres" id="adres" cols="30" rows="2" placeholder="Adres"></textarea>
+                </div>
+                <input type="submit" class="btnup solid" value="Kaydol">
             </form>
         </div>
     </div>
-    <div class="panels-container">
-        <div class="panel left-panel">
-            <div class="content">
-
-                <h2>Hoşgeldiniz</h2>
-                <p>Giriş Yapmak İçin Kayıt Olunuz... </p>
-            </div>
-        </div>
-    </div>
-
-
-
 </div>
+<script src="/js/signup.js"></script>
 
 
 <%- include ('../partails/footer') -%>
