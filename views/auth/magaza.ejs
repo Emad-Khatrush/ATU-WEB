@@ -1,0 +1,120 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- define links -->
+    <link rel="stylesheet" href="/css/magaza.css">
+    <!-- import Bootstrap 5-->
+    <link rel="stylesheet" href="/sources/bootstrap.css">
+    <title>SignUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/magaza.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 ">
+            <h2>Filtrele</h2>
+            <form action="" class="filtre">
+                <div class="input-field input-fieldd">
+                    <h4>Kategoriler</h4>
+                    <label for="Motor"> Motor Tamir</label>
+                    <input type="radio" id="Motor" name="kategori" value="Motor Tamir" > <br>
+                    <label for="Bakım">Araç Bakım</label>
+                    <input type="radio" id="Bakım" name="kategori" value="Araç Bakım" ><br>
+                    <label for="Kaporta"> Kaporta Tamir</label>
+                    <input type="radio" id="Kaporta" name="kategori" value="Kaporta Tamir" ><br>
+                    <label for="Parça"> Araç Parça</label>
+                    <input type="radio" id="Parça" name="kategori" value="Araç Parça" ><br>
+                    <label for="Modifiye"> Araç Modifiye</label>
+                    <input type="radio" id="Modifiye" name="kategori" value="Araç Modifiye" ><br>
+                </div>
+                <div class="input-field">
+
+                    <i class="fas fa-lira-sign"></i>
+                    <label for="fiyat">Fiyat:</label><br>
+                    <select name="fiyat" id="fiyat">
+                        <option value="çok ucuz">-50</option>
+                        <option value="ucuz">50-150</option>
+                        <option value="orta">150-300</option>
+                        <option value="pahalı">300-600</option>
+                        <option value="çok pahalı">600+</option>
+
+
+                    </select>
+
+                </div>
+                <div class="input-field">
+
+                    <i class="fas fa-star"></i>
+                    <label for="puan">Puan</label><br>
+                    <select name="puan" id="puan">
+                        <option value="çok düşük">1</option>
+                        <option value="düşük">2</option>
+                        <option value="orta">3</option>
+                        <option value="yüksek">4</option>
+                        <option value="çok yüksek">5</option>
+
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="bölge">Yakın Mağazalar</label>
+                    <input type="checkbox" id="bölge" value="Bölgemdeki">
+                </div>
+
+            </form>
+
+
+
+        </div>
+        <div class="col-lg-9 col-md-8 ">
+            <h2>Mağazalar</h2>
+            <div class="foto1"><img src="https://images.unsplash.com/photo-1562836003-b0ff2601df1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt=""><b>DEMİR OTO</b>
+                <p><i class="fas fa-star">4</i></p>
+                <i class="far fa-heart" title="Favori Ekle"></i>
+            </div>
+            <div class="foto1"><img src="https://images.unsplash.com/photo-1562836003-b0ff2601df1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt=""><b>NEW OTO</b>
+                <p><i class="fas fa-star">5</i></p>
+                <i class="far fa-heart" title="Favori Ekle"></i>
+            </div>
+            <div class="foto1"><img src="https://images.unsplash.com/photo-1562836003-b0ff2601df1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt=""><b>OTO CENTER</b>
+                <p><i class="fas fa-star">3</i></p>
+                <i class="fas fa-heart" title="Favori Eklendi"></i>
+            </div>
+            <div class="foto1"><img src="https://images.unsplash.com/photo-1562836003-b0ff2601df1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt=""><b>CLASS TUNİNG</b>
+                <p><i class="fas fa-star">2</i></p>
+                <i class="far fa-heart" title="Favori Ekle"></i>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+-->
+
+
+
+<%- include ('../partails/footer') -%>
