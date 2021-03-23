@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+
+div.col-lg-2{
+    border-right: 1px solid black;
+    background-color: #d6cfcf;
+
+}
+
+h2{
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid;
+
+}
+
+.input-field{
+    padding: 20px 0%;
+    text-align: left;
+}
+select{
+    width: 90px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border:2px solid black;
+    color: black;
+    background: white;
+    border-radius: 8px;
+
+}
+select:hover{
+    box-shadow: 0 0 10px 0 black;
+    cursor: pointer;
+}
+label{
+    font-size: 20px;
+}
+
+
+
+p{
+
+    margin:10px;
+    color:black;
+    font-size: 20px;
+
+}
+div.foto1{
+    border-bottom:1px solid black;
+
+}
+.fa-heart{
+    font-size:20px;
+
+}
+.input-fieldd label{
+    font-size: 20px;
+    margin: 8px;
+
+}
+.col-lg-10{
+    background-color:white;
+
+
+}
+h4{
+    margin: 0px;
+    padding: 2px;
+}
+p{
+
+    padding: 2px;
+}
+
+
+button{
+    padding: 11px;
+    background-color: #0072ff;
+    color: #fff;
+    border: none;
+
+}
+button:hover{
+    background-color: #1000ff;
+}
+.card-body
+{
+    background-color: lightgrey;
+}
+.img-desc i{
+    padding:0px;
+    margin: 0px 46px;
+}

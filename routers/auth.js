@@ -9,5 +9,10 @@ router.get("/login", (req,res) => {
 router.get("/signup", (req,res) => {
   res.render('./auth/signup');
 });
+// index route
+router.get("/ürünlerlistesi", (req,res) => {
+  res.render('./auth/ürünlerlistesi');
+});
+
 
 module.exports = router;
