@@ -10,8 +10,8 @@ router.get("/signup", (req,res) => {
   res.render('./auth/signup');
 });
 // index route
-router.get("/magaza", (req,res) => {
-  res.render('./auth/magaza');
+router.get("/store", (req,res) => {
+  res.render('./auth/store');
 });
 
 module.exports = router;

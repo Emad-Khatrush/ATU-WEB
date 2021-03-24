@@ -1,0 +1,89 @@
+
+.col-sm-5{
+    padding: 30px;
+}
+.col-sm-7{
+    padding: 30px;
+}
+#store{
+    cursor: pointer;
+    border-radius: 4px;
+    width:230px;
+    height: 48px;
+    outline: none;
+    border: 1px solid #bab8b8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0px 2px;
+}
+
+.btn.ekle{
+
+    color:white;
+    outline: none;
+
+    background-color:#32a3ff !important;
+}
+.text-muted{
+    color:white
+}
+.fa-store{
+    position: relative;
+    right:5px
+}
+div.card.mb-3{
+    margin:40px 0px;
+}
+
+.filter{
+    cursor: pointer;
+    border-radius:3px;
+    border:1px solid #bab8b8;
+    margin: 5px 7px;
+    background-color: #32a3ff;
+}
+.kare{
+    cursor: pointer;
+    border-radius:3px;
+    border:1px solid #bab8b8;
+    background-color: white;
+    margin: 5px 7px;
+}
+#arac{
+    border:1px solid #bab8b8;
+    outline: none;
+    cursor: pointer;
+    margin:0 10px
+}
+.fa-star::before{
+    color: #ffdf00;
+
+}
+.fa-star-half-alt{
+    color:#ffdf00
+}
+
+p{
+    margin: 0px 5px;
+}
+.card-title{
+
+    font-size: 25px;
+}
+.fa-search-plus{
+    color:black;
+    margin:0px 5px;
+}
+.fa-heart{
+    color:black;
+    margin:0px 5px;
+}
+
+.fa-random{
+    color:black;
+    margin:0px 10px;
+}
+button.kare:hover{
+    background-color:#32a3ff ;
+
+}
