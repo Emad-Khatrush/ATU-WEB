@@ -9,9 +9,7 @@ router.get("/login", (req,res) => {
 router.get("/signup", (req,res) => {
   res.render('./auth/signup');
 });
-// index route
-router.get("/store", (req,res) => {
-  res.render('./auth/store');
-});
+
+
 
 module.exports = router;
