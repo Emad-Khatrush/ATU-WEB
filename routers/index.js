@@ -7,7 +7,7 @@ router.get("/", (req,res) => {
 });
 // index route
 router.get("/stores", (req,res) => {
-  res.render('./auth/stores');
+  res.render('./info/stores');
 });
 
 module.exports = router;

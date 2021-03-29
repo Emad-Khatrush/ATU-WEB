@@ -69,3 +69,11 @@
 button.kare:hover{
     background-color:#32a3ff ;
 }
+.row.g-2{
+    margin:35px
+}
+.kategori{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
