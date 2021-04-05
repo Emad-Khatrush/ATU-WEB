@@ -12,11 +12,13 @@
     border: 1px solid #bab8b8;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    margin-left: 50px;
 }
 .btn.ekle{
     color:white;
     outline: none;
     background-color:#32a3ff !important;
+    margin-bottom: 13px;
 }
 .text-muted{
     color:white
@@ -44,6 +46,7 @@
     cursor: pointer;
     margin:0 5px;
     width: auto;
+    margin-right: 50px;
 }
 .fa-star::before{
     color: #ffdf00;
@@ -57,14 +60,17 @@
 .fa-search-plus{
     color:black;
     margin:0px 5px;
+    cursor:pointer;
 }
 .fa-heart{
     color:black;
     margin:0px 5px;
+    cursor:pointer;
 }
 .fa-random{
     color:black;
     margin:0px 10px;
+    cursor:pointer;
 }
 button.kare:hover{
     background-color:#32a3ff ;
@@ -76,4 +82,18 @@ button.kare:hover{
     display: flex;
     justify-content:space-between;
     align-items: center;
+}
+img{
+    opacity:1;
+
+}
+img:hover{
+    opacity: 0.4;
+}
+.page-item{
+    margin-bottom: 50px;
+
+}
+.page-item:hover{
+    opacity: 0.6;
 }
