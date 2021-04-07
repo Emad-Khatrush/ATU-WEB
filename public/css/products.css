@@ -5,6 +5,7 @@
     padding: 30px;
 
 }
+
 #product{
     cursor: pointer;
     border-radius: 4px;
@@ -44,7 +45,7 @@
     color:#ffdf00
 }
 .card-title{
-    font-weight:50px;
+    font-weight:50;
     font-size: 30px;
 }
 img{
@@ -73,7 +74,8 @@ a.store:hover{
     text-decoration:underline;
 }
 button.btn.btn-primary.btn-lg{
-    margin: 20px 35px;
+    margin: 28px 50px;
+
 }
 h4 a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -86,4 +88,39 @@ h4 a{
 h3 a:hover{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: underline;
+}
+.menu{
+    margin-bottom: 50px;
+}
+img.img-thumbnail{
+    width: 250px;
+    display: flex;
+
+}
+div.carousel-item.active{
+    display: flex;
+    justify-content: center;
+}
+img.img-thumbnail:hover{
+    z-index:2; -webkit-transform: scale(1.5); -ms-transform: scale(1.5); -moz-transform: scale(1.5); transform: scale(1.5);
+
+}
+p i.fas.fa-lira-sign{
+    cursor: pointer;
+    color:rgb(185, 12, 12);
+
+}
+p i.fas.fa-lira-sign:hover{
+    text-decoration: underline;
+}
+del{
+    font-size: 15px;
+    color:black;
+    cursor: pointer;
+}
+div.col-md-4{
+    margin-bottom:28px ;
+}
+.card{
+    height: 720px;
 }
