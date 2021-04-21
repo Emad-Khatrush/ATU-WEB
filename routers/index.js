@@ -8,5 +8,9 @@ router.get("/", (req,res) => {
 router.get("/products", (req,res) => {
   res.render('./info/products');
 });
+// index route
+router.get("/stores", (req,res) => {
+  res.render('./info/stores');
+});
 
 module.exports = router;
