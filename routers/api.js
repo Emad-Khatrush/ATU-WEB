@@ -52,11 +52,11 @@ router.post("/api/signup", async (req, res) => {
         console.log(err.message);
         return res.redirect("/signup");
       }
-      passport.authenticate("local")(req, res, () => { return res.status(200); });
+      passport.authenticate("local")(req, res, () => { return res.status(200).send(res); });
     })
   } catch (error) {
     console.log(err.message);
-    return res.status(404);
+    return res.status(404).send(error);
   }
 });
 module.exports = router;
