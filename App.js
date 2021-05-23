@@ -38,7 +38,8 @@ passport.deserializeUser(User.deserializeUser());
 
 // require routers
 const indexRoute = require("./routers/index"),
-      authRoute  = require("./routers/auth");
+      authRoute  = require("./routers/auth"),
+      authRoute  = require("./routers/api");
 
 const port = process.env.PORT || 3000;
 
