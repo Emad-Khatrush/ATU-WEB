@@ -14,8 +14,9 @@ const express               = require('express'),
 // require models
 const User = require("./models/user");
 
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:3000/atu-test';
 // connect mongoose
-mongoose.connect(process.env.DB_URL , {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
+mongoose.connect(dbUrl , {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
   if(err) {
     console.log(err.message);
   } else {
