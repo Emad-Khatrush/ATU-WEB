@@ -40,7 +40,7 @@ passport.deserializeUser(User.deserializeUser());
 const indexRoute = require("./routers/index"),
       authRoute  = require("./routers/auth");
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // configure packages
 app.use(bodyParser.urlencoded({ extended: true }));
