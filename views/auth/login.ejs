@@ -20,18 +20,18 @@
     <div class="panels-container"></div>
     <div class="form-container">
         <div class="sign">
-            <form action="" class="sign-form">
+            <form action="/login" method="POST" class="sign-form">
                 <h2 class="title">GirişYap </h2><br>
                 <img src="/assets/images/image/mavi_avatar.png" alt="" width="150px">
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Kullanıcı Adı">
+                    <input type="text" placeholder="Kullanıcı Adı" name="username">
                 </div>
 
                 <div class="input-field">
 
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Şifre">
+                    <input type="password" placeholder="Şifre" name="password">
                 </div>
                 <input type="submit" class="btn-solid" value="Giriş Yap"><br>
 
