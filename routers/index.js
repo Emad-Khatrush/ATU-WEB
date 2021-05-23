@@ -12,5 +12,8 @@ router.get("/products", (req,res) => {
 router.get("/stores", (req,res) => {
   res.render('./info/stores');
 });
+router.get("/profile", (req,res) => {
+  res.render('./info/profile');
+});
 
 module.exports = router;
