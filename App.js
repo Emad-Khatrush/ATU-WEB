@@ -39,7 +39,7 @@ passport.deserializeUser(User.deserializeUser());
 // require routers
 const indexRoute = require("./routers/index"),
       authRoute  = require("./routers/auth"),
-      authRoute  = require("./routers/api");
+      apiRoute  = require("./routers/api");
 
 const port = process.env.PORT || 3000;
 
@@ -58,6 +58,7 @@ app.use(async function(req,res,next){
 //-------------------------------
 app.use(indexRoute);
 app.use(authRoute);
+app.use(apiRoute);
 
 
 // local listener
