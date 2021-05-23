@@ -8,10 +8,22 @@ router.post("/api/login",
 passport.authenticate("local",{
   failureRedirect: "/login"
 }), (req, res) => { return res.redirect("/")});
+
 // logout route
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/");
+});
+
+// GET all user data
+router.get("/api/users", async (req, res) => {
+    try {
+       const users = await User.find({});
+       return res.send(users);
+    } catch(err) {
+        console.log(err.status);
+        return res.sendStatus(500);
+    }
 });
 
 // signup POST route
