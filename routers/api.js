@@ -17,7 +17,7 @@ router.get("/logout", (req, res) => {
 // signup POST route
 router.post("/api/signup", async (req, res) => {
   try {
-      console.log(req);
+      console.log(req.body);
     let newUser;
     if(req.body.type !== "store") {
       newUser = new User({
