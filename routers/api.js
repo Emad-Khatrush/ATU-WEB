@@ -1,6 +1,7 @@
 const express = require("express"),
       User    = require("../models/user"),
       passport   = require("passport"),
+      axios = require('axios'),
       router  = express.Router();
 
 // login POST route

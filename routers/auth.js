@@ -27,7 +27,7 @@ router.get("/signup", (req, res) => {
 // signup POST route
 router.post("/signup", async (req, res) => {
   try {
-    let newUser;
+    let newUser, newStore;
     if(req.body.type !== "store") {
       newUser = new User({
         username: req.body.username,
@@ -42,7 +42,7 @@ router.post("/signup", async (req, res) => {
         username: req.body.username,
         storeName: req.body.storeName,
         address: req.body.address,
-        userType: req.body.type,
+        userType: req.body.type || "store",
         email: req.body.email,
         phone: req.body.phone,
         gender:  "male",

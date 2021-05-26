@@ -17,8 +17,8 @@
     <div class="main-body">
         <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">AnaSayfa</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Mağaza</a></li>
+                <li class="breadcrumb-item"><a href="/">AnaSayfa</a></li>
+                <li class="breadcrumb-item"><a href="/stores">Mağaza</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Mağaza Profil</li>
             </ol>
         </nav>
@@ -29,13 +29,13 @@
                         <div class="d-flex flex-column align-items-center text-center">
                             <img class="img-fluid" src="https://lh3.googleusercontent.com/hukMQ4A0AQpYz52IHl2M5Ppbbmmh71RwXjuIT6699o4ZPhadhwBMDmZSDDG5nX36xeXdL6Ui=w1080-h608-p-no-v0" alt="Admin">
                             <div class="mt-3">
-                                <h4>Oto Market</h4>
+                                <h4> <%= store.storeName %>  </h4>
                                 <div class="icon d-flex justify-content-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <p class="text-secondary mb-1">Yedek parça ve aksesuar marketi
+                                <p style="margin: 10px auto;" class="text-secondary mb-1">Yedek parça ve aksesuar marketi
                                 </p>
-                                <p class="text-muted font-size-sm">Ataşehir / İstanbul</p>
+                                <p style="margin: 10px auto; " class="text-muted font-size-sm"><%= store.address %></p>
                                 <button class="btn btn-primary">Alışveriş Yap</button>
                                 <button class="btn btn-outline-primary">Mesaj Gönder</button>
                             </div>
@@ -67,7 +67,7 @@
                                 <h6 class="mb-0">Mağaza Adı</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                Oto Market
+                                <%= store.storeName %>
                             </div>
                         </div>
                         <hr>
@@ -76,7 +76,7 @@
                                 <h6 class="mb-0">E-mail</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                otomarket@gmail.com
+                                <%= store.email %>
                             </div>
                         </div>
                         <hr>
@@ -85,7 +85,7 @@
                                 <h6 class="mb-0">Telefon Numarası</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                0555-555-55-55
+                                <%= store.phone %>
                             </div>
                         </div>
                         <hr>
@@ -104,7 +104,7 @@
                                 <h6 class="mb-0">Adres</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                Ataşehir / İstanbul
+                                <%= store.address %> 
                             </div>
                         </div>
                     </div>

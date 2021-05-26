@@ -40,139 +40,46 @@
         </div>
         <h1 class="d-flex justify-content-center  ">Mağazalar</h1>
     </div>
-    <div class="card m-5">
-        <div class="row g-2">
-            <div class="col-md-4">
-                <img class="card-img-top"
-                     src="https://lh3.googleusercontent.com/hukMQ4A0AQpYz52IHl2M5Ppbbmmh71RwXjuIT6699o4ZPhadhwBMDmZSDDG5nX36xeXdL6Ui=w1080-h608-p-no-v0"
-                     alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <div class="kategori">
-                        <h5>Oto Market</h5>
-                        <div class="icon d-flex justify-content-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <p>(24)</p>
-                        </div>
-                    </div>
-                    <p class="card-text">Yedek parça ve aksesuar marketidir. Aradığınız tüm aksesuar ürünleri. Oto yedek parça
-                        ve aksesuar stoğu ile, Türkiye'nin en iyi oto marketidir.</p>
-                    <p class="card-text"><b>Adres:</b> Ataşehir / İstanbul</p>
-                    <p class="card-text"><small class="text-muted"><button class="btn ekle"><i class="fas fa-store"></i>Mağazaya
-                                Git</button><i class="fas fa-random fa-lg"></i><i class="fas fa-search-plus fa-lg"></i><i
-                                    class="far fa-heart fa-lg " title="Favorilere Ekle"></i></small></p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="card m-5">
-        <div class="row g-2">
-            <div class="col-md-4">
-                <img class="card-img-top" src="https://storage.otolye.com/141412/b2b/service/images/s432/thumb375.webp?v8"
-                     alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <div class="kategori">
-                        <h5>Demir Oto</h5>
-                        <div class="icon d-flex justify-content-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            <p>(74)</p>
+    <% stores.forEach( store => { %>
+        <div class="card m-5">
+            <div class="row g-2">
+                    <div class="col-md-4">
+                        <img class="card-img-top"
+                            src="https://lh3.googleusercontent.com/hukMQ4A0AQpYz52IHl2M5Ppbbmmh71RwXjuIT6699o4ZPhadhwBMDmZSDDG5nX36xeXdL6Ui=w1080-h608-p-no-v0"
+                            alt="...">
+                    </div>
+                    
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="kategori">
+                                <h5> <%= store.storeName %>  </h5>
+                                <div class="icon d-flex justify-content-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <p>(24)</p>
+                                </div>
+                            </div>
+                            <p class="card-text">Yedek parça ve aksesuar marketidir. Aradığınız tüm aksesuar ürünleri. Oto yedek parça
+                                ve aksesuar stoğu ile, Türkiye'nin en iyi oto marketidir.</p>
+                            <p class="card-text"><b>Adres:</b> <%= store.address %></p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <button class="btn ekle">
+                                        <a style="color: #fff; text-decoration: none;" href="/store/<%= store._id %> "> <i class="fas fa-store"></i> Mağazaya Git </a>             
+                                    </button>
+                                    <i class="fas fa-random fa-lg"></i>
+                                    <i class="fas fa-search-plus fa-lg"></i>
+                                    <i class="far fa-heart fa-lg " title="Favorilere Ekle"></i>
+                                </small>
+                            </p>
                         </div>
                     </div>
-                    <p class="card-text">Şirketimizin öde gelen hedefi yedek parça piyasamızda ülkemizin gururu olan bir çok
-                        fabrikamızla siz değerli müşterilerimiz arasında köprü olarak işbirliğinizi sağlamaya çalışmaktadır.</p>
-                    <p class="card-text"><b>Adres:</b> Esenyurt / İstanbul</p>
-                    <p class="card-text"><small class="text-muted"><button class="btn ekle"><i class="fas fa-store"></i>Mağazaya
-                                Git</button><i class="fas fa-random fa-lg"></i><i class="fas fa-search-plus fa-lg"></i><i
-                                    class="far fa-heart fa-lg" title="Favorilere Ekle"></i></small></p>
-                </div>
+                
             </div>
         </div>
-    </div>
+    <% }) %> 
 
-    <div class="card m-5">
-        <div class="row g-2">
-            <div class="col-md-4">
-                <img class="card-img-top"
-                     src="https://www.egemetropolgazetesi.com/images/firmalar/2019/10/ozdemir-oto-tamir-ve-bakim-servisi.jpg"
-                     alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <div class="kategori">
-                        <h5>Özdemir Oto</h5>
-                        <div class="icon d-flex justify-content-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                            <p>(176)</p>
-                        </div>
-                    </div>
-                    <p class="card-text">Özdemir Oto Market Renault ,Fiat ,Tofaş ve Dacia grubu araçlar için yedek parça ve
-                        bakım, onarım malzemeleri tedariğini konusunda 1984 yılından beri Yenisanayi ,Şaşmaz ve Büyüksanayi
-                        Şubeleri olmak üzere toplam 40 Uzman personelimiz ile haftanın her günü hizmet vermekteyiz.</p>
-                    <p class="card-text"><b>Adres:</b> Altındağ / Ankara</p>
-                    <p class="card-text"><small class="text-muted"><button class="btn ekle"><i class="fas fa-store"></i>Mağazaya
-                                Git</button><i class="fas fa-random fa-lg"></i><i class="fas fa-search-plus fa-lg"></i><i
-                                    class="fas fa-heart fa-lg " title="Favorilere Eklendi"></i></small></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card m-5">
-        <div class="row g-2">
-            <div class="col-md-4">
-                <img class="card-img-top" src="https://esenyurtfirmarehberi.com/wp-content/uploads/harputoto.jpg" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <div class="kategori">
-                        <h5>Harput Oto</h5>
-                        <div class="icon d-flex justify-content-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                            <p>(214)</p>
-                        </div>
-                    </div>
-                    <p class="card-text">Harput oto Kaporta, Fırın Boya, Oto Bakım Onarım, Mekanik, Oto Elektrik konularında
-                        Garantili hizmet vermektedir.</p>
-                    <p class="card-text"><b>Adres:</b> Kartal / İstanbul</p>
-                    <p class="card-text"><small class="text-muted"><button class="btn ekle"><i class="fas fa-store"></i>Mağazaya
-                                Git</button><i class="fas fa-random fa-lg"></i><i class="fas fa-search-plus fa-lg"></i><i
-                                    class="far fa-heart fa-lg" title="Favorilere Ekle"></i></small></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card m-5">
-        <div class="row g-2">
-            <div class="col-md-4">
-                <img class="card-img-top" src="https://www.kartalotosanayi.com/Content/images/04_23_2018_DSC_7351.JPG"
-                     alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <div class="kategori">
-                        <h5>Barış Oto</h5>
-                        <div class="icon d-flex justify-content-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                            <p>(146)</p>
-                        </div>
-                    </div>
-                    <p class="card-text">Çağımızın rekabet koşullarında kaliteli hizmet anlayışıyla müşterilerimizin
-                        memnuniyetini sürekli en üst seviyede tutmak Barış Oto olarak sektöründe en son teknolojileri kullanmak ve
-                        bunları içimizde barındırdığımız şeffalık, dürüstlük ve çalışma azmiyle birleştirerek yenilikçi, güvenilir
-                        ve teknolojik yaklaşımlarla kaliteli hizmet sunmaktadır.</p>
-                    <p class="card-text"><b>Adres:</b> Bornova / İzmir</p>
-                    <p class="card-text"><small class="text-muted"><button class="btn ekle"><i class="fas fa-store"></i>Mağazaya
-                                Git</button><i class="fas fa-random fa-lg"></i><i class="fas fa-search-plus fa-lg"></i><i
-                                    class="far fa-heart fa-lg" title="Favorilere Ekle"></i></small></p>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <div class="row">
         <div class="col-md-12 d-flex justify-content-center">
             <nav aria-label="...">

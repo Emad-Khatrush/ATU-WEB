@@ -1,174 +1,169 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family:'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
-.mycontainer{
-    position: relative;
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    margin:0;
-    padding: 0;
-
+.mycontainer {
+  position: relative;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
 }
-.sign-form h2{
-    margin: 0px 100px;
-    padding: px;
+.sign-form h2 {
+  margin: 0px 100px;
+  padding: px;
 }
-.sign-form img{
-    margin: 0px 90px;
-    padding: px;
+.sign-form img {
+  margin: 0px 90px;
+  padding: px;
 }
 
-.form-container{
-    padding:35px;
-    text-align: center;
+.form-container {
+  padding: 35px;
+  text-align: center;
 }
-.panels-container{
-    width: 100%;
-    height: 100%;
-    background-image: url(https://images.unsplash.com/photo-1570071677470-c04398af73ca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=612&q=80);
-    background-repeat: no-repeat;
-    background-size:cover;
-}
-
-.title{
-    font-size: 2.2rem;
-    color:#444;
-    margin-bottom: 10px;
-}
-.input-field{
-    max-width: 380px;
-    width: 100%;
-    height: 55px;
-    background-color: #f0f0f0;
-    margin:10px auto;
-    border-radius: 55px;
-    display: grid;
-    grid-template-columns:15% 85% ;
-    padding: 0 0.4rem;
-    position: relative;
-}
-.input-field i{
-    text-align: center;
-    line-height: 55px;
-    color:#acacac;
-    font-size: 1.5rem;
-}
-.input-field input{
-    background:none;
-    outline: none;
-    border:none;
-    line-height:1;
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: #333;
-}
-.input-field input:placeholder-shown{
-    color:#aaa;
-    font-weight: 500;
-
-}
-.btn-solid{
-    width:150px;
-    height: 49px;
-    outline: none;
-    border:none;
-    border-radius: 48px;
-    background-color: #0072ff;
-    color:white;
-    text-transform: uppercase;
-    font-weight:600 ;
-    margin: 10px 100px;
-    transition: all 0.5s;
-
+.panels-container {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://images.unsplash.com/photo-1570071677470-c04398af73ca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=612&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  height: 55px;
+  background-color: #f0f0f0;
+  margin: 10px auto;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  font-size: 1.5rem;
+}
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #333;
+}
+.input-field input:placeholder-shown {
+  color: #aaa;
+  font-weight: 500;
+}
+.btn-solid {
+  width: 150px;
+  height: 49px;
+  outline: none;
+  border: none;
+  border-radius: 48px;
+  background-color: #0072ff;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
 
-.btn-solid:hover{
-    background-color: #1000ff;
-    box-shadow: 0 0 10px 0 #0072ff;
-
+.btn-solid:hover {
+  background-color: #1000ff;
+  box-shadow: 0 0 10px 0 #0072ff;
 }
 .social-icon {
-    height: 46px;
-    width: 46px;
-    border: 1px solid #333;
-    margin:0 0.45rem;
-    text-decoration: none;
-    color:#333;
-    font-size:1.3rem;
-    border-radius:50%;
-    transition: all 0.5s;
-    text-decoration: none;
-    color:#333;
-    font-size:1.7rem;
-    border-radius:50%;
-    transition: all 0.5s;
-
+  height: 46px;
+  width: 46px;
+  border: 1px solid #333;
+  margin: 0 0.45rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  transition: all 0.5s;
 }
 .social-icon i {
-    margin: 12px;
-    padding: 2px;
+  margin: 12px;
+  padding: 2px;
 }
-.social-icon:hover{
-    color:#0072ff;
-    border-color: #1000ff;
+.social-icon:hover {
+  color: #0072ff;
+  border-color: #1000ff;
 }
-.sign{
-
-    display: grid;
-    grid-template-columns: 1fr;
+.sign {
+  display: grid;
+  grid-template-columns: 1fr;
 }
-form.sign{
-    z-index:2;
+form.sign {
+  z-index: 2;
 }
-.panels-container{
-
-
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
+.panels-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.panel{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.left-panel{
-    padding:3rem 17% 2rem 12%;
+.left-panel {
+  padding: 3rem 17% 2rem 12%;
 }
-.panel .content{
-    color:#fff;
+.panel .content {
+  color: #fff;
 }
-.panel h2{
-    font-weight: 600;
-    line-height: 1;
-    font-size: 3rem;
+.panel h2 {
+  font-weight: 600;
+  line-height: 1;
+  font-size: 3rem;
 }
-.panel p{
-    font-size: 1.5rem;
-    padding: 0.7rem 0;
+.panel p {
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
 }
 
-.şifre{
-
-
-    font-size: 1rem;
-    transition: .3s;
-    text-decoration:none ;
-    color:black;
-
+.şifre {
+  font-size: 1rem;
+  transition: 0.3s;
+  text-decoration: none;
+  color: black;
 }
-a:hover{
-    color:#0072ff;
+a:hover {
+  color: #0072ff;
+}
+.newUser {
+  max-width: 85%;
+  margin: auto;
+  text-align: left;
+  color: slategray;
+  text-decoration: none;
 }
