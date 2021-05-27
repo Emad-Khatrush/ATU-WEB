@@ -10,9 +10,14 @@ router.get("/login", (req, res) => {
 
 // login POST route
 router.post("/login",
+
 passport.authenticate("local",{
-  failureRedirect: "/login"
-}), (req, res) => { return res.redirect("/")});
+  failureRedirect: "/login",
+  failureFlash: true
+}),
+(req, res) => { 
+  return res.redirect("/");
+});
 // logout route
 router.get("/logout", (req, res) => {
   req.logout();

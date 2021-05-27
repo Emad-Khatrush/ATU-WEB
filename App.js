@@ -9,6 +9,7 @@ const express               = require('express'),
       passport              = require("passport"),
       localStrategy         = require("passport-local").Strategy,
       passportLocalMongoose = require("passport-local-mongoose"),
+      flash                 = require("connect-flash"),
       app                   = express();
 
 // require models
@@ -35,6 +36,7 @@ app.use(passport.session());
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+app.use(flash());
 
 // require routers
 const indexRoute = require("./routers/index"),
@@ -49,7 +51,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-app.use(async function(req,res,next){
+app.use( (req, res, next) => {
+  res.locals.error       = req.flash("error");
+  res.locals.success     = req.flash("success");
   res.locals.currentUser = req.user;
   next();
 });
