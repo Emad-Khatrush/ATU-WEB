@@ -25,6 +25,44 @@ router.get("/stores", async (req, res) => {
   res.render('./info/stores', { stores });
 });
 
+// addproduct GET route
+router.get("/addproduct", middleware.isLogin, (req, res) => {
+  res.render('./auth/addproduct');
+});
+
+// addproduct POST route
+router.post("/addproduct", middleware.isLogin, upload.array("productImages"), async (req, res) => {
+  try {
+    const product = new Product({
+      user: req.user,
+      title: req.body.name,
+      description: req.body.description,
+      category: req.body.category,
+      stock: req.body.stock,
+      kargoDay: req.body.kargoDay,
+      price: req.body.price
+    });
+    if(req.files) {
+      const images = req.files.map(file => { return { fileName: file.filename, url: file.path } });
+      product.images = images;
+    }
+    await product.save();
+    req.flash("Ürün başarıyla eklendi");
+    res.redirect('/store/' + req.user._id);
+  } catch (error) {
+    req.flash("error", error.message)
+    res.redirect('./auth/addproduct');
+  }
+});
+
+// userprofile GET route
+router.get("/userprofile", middleware.isLogin, (req, res) => {
+  res.render('./auth/userprofile');
+});
+router.get("/addpost", middleware.isLogin, (req, res) => {
+  res.render('./auth/addpost');
+});
+
 // myprofile Get route
 router.get("/myprofile", middleware.isLogin , async (req, res) => {
   res.render('./info/myprofile');
@@ -38,7 +76,13 @@ router.put("/myprofile/edit", middleware.isLogin, upload.single("profileImage"),
     email: req.body.email,
     phone: req.body.phone,
     address: req.body.address,
-    description: req.body.description
+    description: req.body.description,
+    maintenanceDate: req.body.maintenanceDate,
+    carYear: req.body.carYear,
+    carModel: req.body.carModel,
+    facebook: req.body.facebook,
+    instagram: req.body.instagram,
+    website: req.body.website,
   }
   try {
     const userUpdated = await User.findOneAndUpdate({ _id: req.user._id }, user);

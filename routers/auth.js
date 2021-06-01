@@ -7,17 +7,6 @@ const express = require("express"),
 router.get("/login", (req, res) => {
   res.render('./auth/login');
 });
-// addproduct GET route
-router.get("/addproduct", (req, res) => {
-  res.render('./auth/addproduct');
-});
-// userprofile GET route
-router.get("/userprofile", (req, res) => {
-  res.render('./auth/userprofile');
-});
-router.get("/advertise", (req, res) => {
-  res.render('./auth/advertise');
-});
 
 // login POST route
 router.post("/login",

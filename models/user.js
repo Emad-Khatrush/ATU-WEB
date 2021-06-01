@@ -13,6 +13,9 @@ var userSchema = new mongoose.Schema({
     url: String,
     fileName: String
   },
+  maintenanceDate: Date,
+  carYear: Number,
+  carModel: String,
   phone: {type: Number, required: true},
   userType: {type: String, default: "buyer"},
   gender: String,

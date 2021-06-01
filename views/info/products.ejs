@@ -48,14 +48,13 @@
                                     aria-label="Slide 2"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://mcdn01.gittigidiyor.net/65963/tn50/659637149_tn50_0.jpg?1617691" class="img-thumbnail"
-                                     alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://mcdn01.gittigidiyor.net/66113/tn50/661130174_tn50_0.jpg?1617692" class="img-thumbnail"
-                                     alt="...">
-                            </div>
+                            <% product.images.forEach((img, i) => { %>
+                                <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                                    <img src="<%= img.url %> " class="img-thumbnail"
+                                         alt="...">
+                                </div>
+                            <% }); %> 
+                            
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-<%= index %>"
                                     data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -79,7 +78,7 @@
                                     class="fas fa-shipping-fast fa-2x mx-3" title="Hızlı Teslimat"></i></p>
                     </div>
                     <div class="fiyat">
-                        <p class="d-flex justify-content-center"><i class="fas fa-lira-sign fa-2x"><b>252.52</b></i></p>
+                        <p class="d-flex justify-content-center"><i class="fas fa-lira-sign fa-2x"><b><%= product.price %></b></i></p>
                         <del class="d-flex justify-content-center"><i class="fas fa-lira-sign fa-1x"></i><b>340.25</b></del>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg"> Ürün Detayı </button>
