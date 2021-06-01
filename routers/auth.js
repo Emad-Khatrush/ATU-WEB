@@ -11,6 +11,14 @@ router.get("/login", (req, res) => {
 router.get("/addproduct", (req, res) => {
   res.render('./auth/addproduct');
 });
+// userprofile GET route
+router.get("/userprofile", (req, res) => {
+  res.render('./auth/userprofile');
+});
+router.get("/advertise", (req, res) => {
+  res.render('./auth/advertise');
+});
+
 // login POST route
 router.post("/login",
 
@@ -18,7 +26,7 @@ passport.authenticate("local",{
   failureRedirect: "/login",
   failureFlash: true
 }),
-(req, res) => { 
+(req, res) => {
   return res.redirect("/");
 });
 // logout route
@@ -56,7 +64,7 @@ router.post("/signup", async (req, res) => {
         gender:  "male",
       });
     }
-    
+
     const pass1 = req.body.password;
     const pass2 = req.body.password2;
 

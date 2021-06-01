@@ -10,6 +10,7 @@ const express               = require('express'),
       localStrategy         = require("passport-local").Strategy,
       passportLocalMongoose = require("passport-local-mongoose"),
       flash                 = require("connect-flash"),
+      method_override       = require("method-override"),
       app                   = express();
 
 // require models
@@ -37,6 +38,7 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use(flash());
+app.use(method_override("_method"));
 
 // require routers
 const indexRoute = require("./routers/index"),

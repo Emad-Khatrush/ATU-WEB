@@ -9,6 +9,10 @@ var userSchema = new mongoose.Schema({
   email: String,
   address: String,
   posts: Object,
+  image: {
+    url: String,
+    fileName: String
+  },
   phone: {type: Number, required: true},
   userType: {type: String, default: "buyer"},
   gender: String,
