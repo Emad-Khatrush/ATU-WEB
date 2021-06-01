@@ -11,6 +11,9 @@ router.get("/login", (req, res) => {
 router.get("/userprofile", (req, res) => {
   res.render('./auth/userprofile');
 });
+router.get("/advertise", (req, res) => {
+  res.render('./auth/advertise');
+});
 
 // login POST route
 router.post("/login",
