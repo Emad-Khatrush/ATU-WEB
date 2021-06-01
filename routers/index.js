@@ -3,7 +3,11 @@ const express    = require("express"),
       User       = require("../models/user"),
       middleware = require("../middleware/index"),
       async      = require("async"),
+      multer     = require('multer'),
       router     = express.Router();
+
+const { storage, cloudinary } = require('../cloudinary');
+const upload = multer({ storage });
 
 // index route
 router.get("/", (req, res) => {
@@ -27,7 +31,7 @@ router.get("/myprofile", middleware.isLogin , async (req, res) => {
 });
 
 // edit profile PUT: route
-router.put("/myprofile/edit", middleware.isLogin, async (req, res) => {
+router.put("/myprofile/edit", middleware.isLogin, upload.single("profileImage"), async (req, res) => {
   var user = {
     username: req.body.username,
     storeName: req.body.storeName,
@@ -38,7 +42,13 @@ router.put("/myprofile/edit", middleware.isLogin, async (req, res) => {
   }
   try {
     const userUpdated = await User.findOneAndUpdate({ _id: req.user._id }, user);
+    if (req.file) {
+      const image = { url: req.file.path, filename: req.file.filename }
+      userUpdated.image = image;
+    }
+    await userUpdated.save();
     req.flash("success", "Bilgileri başarıyla güncellendi");
+    console.log(userUpdated);
     res.redirect("/myprofile");
   } catch (error) {
     console.log(error.message);
