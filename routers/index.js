@@ -1,26 +1,88 @@
-const express = require("express"),
-      Product = require("../models/product"),
-      User    = require("../models/user"),
-      router  = express.Router();
+const express    = require("express"),
+      Product    = require("../models/product"),
+      User       = require("../models/user"),
+      middleware = require("../middleware/index"),
+      async      = require("async"),
+      router     = express.Router();
 
 // index route
 router.get("/", (req, res) => {
   res.render('./info/home');
 });
+
 router.get("/products", async (req, res) => {
   const products = await Product.find({}).populate('user');
   res.render('./info/products', { products });
 });
+
 // Store Get route
 router.get("/stores", async (req, res) => {
   const stores = await User.find({userType: "store"});
   res.render('./info/stores', { stores });
 });
-// editstore Get route
-router.get("/editstore", async (req, res) => {
-  const stores = await User.find({userType: "editstore"});
-  res.render('./info/editstore', { stores });
+
+// myprofile Get route
+router.get("/myprofile", middleware.isLogin , async (req, res) => {
+  res.render('./info/myprofile');
 });
+
+// edit profile PUT: route
+router.put("/myprofile/edit", middleware.isLogin, async (req, res) => {
+  var user = {
+    username: req.body.username,
+    storeName: req.body.storeName,
+    email: req.body.email,
+    phone: req.body.phone,
+    address: req.body.address,
+    description: req.body.description
+  }
+  try {
+    const userUpdated = await User.findOneAndUpdate({ _id: req.user._id }, user);
+    req.flash("success", "Bilgileri başarıyla güncellendi");
+    res.redirect("/myprofile");
+  } catch (error) {
+    console.log(error.message);
+    req.flash("error", error.message);
+    res.redirect("/myprofile");
+  }
+});
+// edit profile password PUT: route
+// Change Password: post
+router.post("/myprofile/edit/password", middleware.isLogin, (req, res) => {
+      if (req.body.newPassword1 === req.body.newPassword2) {
+        async.waterfall([
+           (done) => {
+            User.findOne({username: req.user.username}, function(err,user){
+              if (err) {
+                req.flash("error", err.message);
+                res.redirect("/myprofile");
+              }
+              user.setPassword(req.body.newPassword1, function(err){
+                user.save(function(err) {
+                  if (err) {
+                    req.flash("error", err.message);
+                    res.redirect("/myprofile");
+                  }
+                  req.login(user, function(err) {
+                    if (err) {
+                      req.flash("error", err.message);
+                      res.redirect("/myprofile");
+                    }
+                    done(err, user);
+                  });
+                });
+              })
+              req.flash("success", "Password changed successfully");
+              res.redirect("/myprofile");
+            });
+          }
+        ])
+    } else {
+      req.flash("error", "Passwords do not match");
+      res.redirect("/myprofile");
+    }
+});
+
 // Store profile Get route
 router.get("/store/:id", async (req, res) => {
   const storeId = req.params.id;

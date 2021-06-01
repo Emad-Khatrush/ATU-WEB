@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ATUUYGULAMA/ATU-WEB#readme",
   "dependencies": {
+    "async": "^3.2.0",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
@@ -26,6 +27,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "flash": "^1.1.0",
+    "method-override": "^3.0.0",
     "mongoose": "^5.12.8",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
