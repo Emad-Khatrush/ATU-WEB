@@ -54,6 +54,32 @@ router.post("/addproduct", middleware.isLogin, upload.array("productImages"), as
     res.redirect('./auth/addproduct');
   }
 });
+router.get("/product/edit/:id", middleware.isLogin, async (req, res) => {
+  const productId = req.params.id;
+  const product = await Product.findOne({ _id: productId});
+  res.render("./info/editProduct", { product });
+});
+router.put("/product/edit/:id", middleware.isLogin, upload.array("productImages"), async (req, res) => {
+  const productId = req.params.id;
+  var product = {
+    title: req.body.name,
+    description: req.body.description,
+    category: req.body.category,
+    stock: req.body.stock,
+    kargoDay: req.body.kargoDay,
+    price: req.body.price
+  }
+  try {
+    const productUpdated = await Product.findOneAndUpdate({ _id: productId }, product);
+    await productUpdated.save();
+    req.flash("success", "Ürün bilgileri başarıyla güncellendi");
+    res.redirect("/product/edit/" + productId);
+  } catch (error) {
+    console.log(error.message);
+    req.flash("error", error.message);
+    res.redirect("/product/edit/" + productId);
+  }
+})
 
 // userprofile GET route
 router.get("/userprofile", middleware.isLogin, (req, res) => {
@@ -141,8 +167,13 @@ router.post("/myprofile/edit/password", middleware.isLogin, (req, res) => {
 router.get("/store/:id", async (req, res) => {
   const storeId = req.params.id;
   try {
-    const foundedStore = await User.findOne({ _id: storeId });
-    res.render('./info/store', { store: foundedStore });
+    const store = await User.findOne({ _id: storeId });
+    const products = await Product.find({ user: storeId });
+    const n = 4
+    const dividedProducts = new Array(Math.ceil(products.length / n))
+    .fill()
+    .map(_ => products.splice(0, n))
+    res.render('./info/store', { store, products: dividedProducts });
   } catch (error) {
     console.log(error.message);
     res.redirect("back");

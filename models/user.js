@@ -1,7 +1,7 @@
-var mongoose = require("mongoose");
-var passportLocalMongoose = require("passport-local-mongoose");
+const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 
-var userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   username: {type: String, required: true},
   firstName: String,
   lastName: String,
@@ -21,7 +21,6 @@ var userSchema = new mongoose.Schema({
   gender: String,
   isAdmin: { type: Boolean, default: false },
   description: String,
-  products: Object,
   images: Object,
   posts: Object,
   reviews: Number,
