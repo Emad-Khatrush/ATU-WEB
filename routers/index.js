@@ -10,4 +10,8 @@ router.get("/stores", (req,res) => {
   res.render('./info/stores');
 });
 
+router.get("/favoriler", (req,res) => {
+  res.render('./info/favoriler');
+});
+
 module.exports = router;
