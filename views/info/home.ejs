@@ -39,7 +39,7 @@
                       <a href="#" class="nav__link dropdown__link"> Hesabım <i class='bx bx-chevron-down dropdown__icon'></i></a>
 
                       <ul class="dropdown__menu">
-                          <li class="dropdown__item"><a href="#" class="nav__link">Profilime Git</a></li>
+                          <li class="dropdown__item"><a href="/myprofile" class="nav__link">Profilime Git</a></li>
                           <li class="dropdown__item"><a href="#" class="nav__link">Favorilerime Git</a></li>
                       </ul>
                   </li>
@@ -71,13 +71,17 @@
                 <ul class="nav-desktop" uk-navbar>
                     <li> <a href="/stores"> Mağazalar </a> </li>
                     <li> <a href="/products"> Ürünler </a> </li>
+                    <li> <a href="/posts"> İlanlar </a> </li>
                     <% if(currentUser) { %>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <%= currentUser.username %> 
                           </a>
                           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#"> Profilim </a></li>
+                            <li><a class="dropdown-item" href="/myprofile"> Profilim </a></li>
+                            <% if(currentUser.userType === 'store') { %>
+                              <li><a class="dropdown-item" href="/addproduct"> Ürün Ekle </a></li>
+                            <% }  %> 
                             <li><a class="dropdown-item" href="#"> Favorileri </a></li>
                             <li><a class="dropdown-item" href="/logout"> Çıkış Yap </a></li>
                           </ul>

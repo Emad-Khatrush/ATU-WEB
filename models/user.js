@@ -1,7 +1,7 @@
-var mongoose = require("mongoose");
-var passportLocalMongoose = require("passport-local-mongoose");
+const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 
-var userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   username: {type: String, required: true},
   firstName: String,
   lastName: String,
@@ -9,12 +9,18 @@ var userSchema = new mongoose.Schema({
   email: String,
   address: String,
   posts: Object,
+  image: {
+    url: String,
+    fileName: String
+  },
+  maintenanceDate: Date,
+  carYear: Number,
+  carModel: String,
   phone: {type: Number, required: true},
   userType: {type: String, default: "buyer"},
   gender: String,
   isAdmin: { type: Boolean, default: false },
   description: String,
-  products: Object,
   images: Object,
   posts: Object,
   reviews: Number,

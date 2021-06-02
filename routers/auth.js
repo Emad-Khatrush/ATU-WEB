@@ -15,7 +15,7 @@ passport.authenticate("local",{
   failureRedirect: "/login",
   failureFlash: true
 }),
-(req, res) => { 
+(req, res) => {
   return res.redirect("/");
 });
 // logout route
@@ -53,7 +53,7 @@ router.post("/signup", async (req, res) => {
         gender:  "male",
       });
     }
-    
+
     const pass1 = req.body.password;
     const pass2 = req.body.password2;
 
