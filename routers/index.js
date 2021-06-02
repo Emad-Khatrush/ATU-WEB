@@ -16,6 +16,13 @@ router.get("/stores", async (req, res) => {
   const stores = await User.find({userType: "store"});
   res.render('./info/stores', { stores });
 });
+router.get("/adverts",  (req, res) => {
+  res.render('./info/adverts', );
+});
+
+router.get("/adverts-details",  (req, res) => {
+  res.render('./info/adverts-details', );
+});
 // Store profile Get route
 router.get("/store/:id", async (req, res) => {
   const storeId = req.params.id;
