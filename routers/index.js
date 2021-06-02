@@ -1,6 +1,7 @@
 const express    = require("express"),
       Product    = require("../models/product"),
       User       = require("../models/user"),
+      Comment    = require("../models/comment"),
       middleware = require("../middleware/index"),
       async      = require("async"),
       multer     = require('multer'),
@@ -80,6 +81,26 @@ router.put("/product/edit/:id", middleware.isLogin, upload.array("productImages"
     res.redirect("/product/edit/" + productId);
   }
 })
+
+// comment Post request
+router.post("/comment/:storeId",middleware.isLogin, async (req, res) => {
+  try {
+    const date = new Date();
+    const comment = new Comment({
+      user: req.user,
+      storeId: req.params.storeId,
+      createdAt: date,
+      updatedAt: date,
+      comment: req.body.comment
+    });
+    await comment.save();
+    req.flash("succuss", "Yorumunuz başarıyla eklendi");
+    res.redirect("back");
+  } catch (error) {
+    req.flash("error", error.message);
+    res.redirect("back");
+  }
+});
 
 // userprofile GET route
 router.get("/userprofile", middleware.isLogin, (req, res) => {
@@ -169,11 +190,13 @@ router.get("/store/:id", async (req, res) => {
   try {
     const store = await User.findOne({ _id: storeId });
     const products = await Product.find({ user: storeId });
+    const comments = await Comment.find({ storeId }).populate('user');
+
     const n = 4
     const dividedProducts = new Array(Math.ceil(products.length / n))
     .fill()
     .map(_ => products.splice(0, n))
-    res.render('./info/store', { store, products: dividedProducts });
+    res.render('./info/store', { store, products: dividedProducts, comments });
   } catch (error) {
     console.log(error.message);
     res.redirect("back");

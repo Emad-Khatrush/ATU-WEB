@@ -199,85 +199,44 @@
             <section class="content-item" id="comments" class="m">
                 <div class="row">
                     <div class="col-sm-12">
-                        <form>
-                            <h3 class="pull-left">Yeni Yorum</h3>
-                            <fieldset>
-                                <div class="row">
-                                    <div class="col-sm-2 col-lg-1 hidden-xs ">
-                                        <img class="img-responsive" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" width="80px" >
+                        <% if( (currentUser && currentUser.userType !== "store") || !currentUser ) { %>
+                            <form action="/comment/<%= store._id %>" method="POST">
+                                <h3 class="pull-left">Yeni Yorum</h3>
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-sm-2 col-lg-1 hidden-xs ">
+                                            <img class="img-responsive" src="<%= currentUser && currentUser.image.url ? currentUser.image.url : 'https://bootdey.com/img/Content/avatar/avatar1.png' %>" alt="" width="80px" >
+                                        </div>
+                                        <div class="form-group col-xs-12 col-sm-10 col-lg-11">
+                                            <textarea <%= !currentUser ? 'disabled' : null %> class="form-control" id="message" name="comment" placeholder="Mesajınızı Yazın" required></textarea>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-xs-12 col-sm-10 col-lg-11">
-                                        <textarea class="form-control" id="message" placeholder="Mesajınızı Yazın" required=""></textarea>
-                                    </div>
+                                    <button class="btn btn-primary pull-right"> <%= currentUser ? 'Gönder' : 'Yorum yapmak için giriş yapın' %>  </button>
+                                </fieldset>
+                            </form>
+                        <% } %> 
+
+                        <% if( comments.length ) { %>
+                            <h4 class="yeni-yorum">Kullanıcı Yorumları</h4>
+                        <% } %>
+
+                        <% comments.forEach( (comment) => {   %>
+                            <div class="media">
+                                <a class="pull-left" href="#"><img class="media-object" src="<%= comment.user.image.url ? comment.user.image.url : 'https://bootdey.com/img/Content/avatar/avatar1.png' %>" alt="" width="70"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><%= comment.user.firstName + " " + comment.user.lastName %></h4>
+                                    <ul class="list-unstyled list-inline  pull-right">
+                                        <li class="yorum"><a href="#"><i id="like" class="far fa-thumbs-up fa-2x mb-2"></i><b> <%= comment.like %>  </b></a>
+                                    </ul>
+                                    <p> <%= comment.comment %>  </p>
+                                    <ul class="list-unstyled list-inline media-detail pull-left">
+                                        <li><i class="fa fa-calendar"></i> <%= new Date(comment.updatedAt).toISOString().slice(0,10) %>  </li>
+                                    </ul>
                                 </div>
-                                <button type="button" class="btn btn-primary pull-right">Gönder</button>
-                            </fieldset>
-                        </form>
-                        <h4 class="yeni-yorum">Kullanıcı Yorumları</h4>
-                        <div class="media">
-                            <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" width="70"></a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Mesut Kaya</h4>
-                                <ul class="list-unstyled list-inline  pull-right">
-                                    <li class="yorum"><a href="#"><i id="like" class="far fa-thumbs-up fa-2x mb-2"></i><b>25</b></a>
-                                    <li class="yorum"><a href=""><i class="fas fa-comment fa-2x"></i></a></li>
-                                </ul>
-                                <p>Zamanında hızlı teslimat yapıldı Müşteri temsilcileri gayet iyi ve sıcak kanlıydı ve ürün eksiksiz geldi teşekkürler oto market.</p>
-                                <ul class="list-unstyled list-inline media-detail pull-left">
-                                    <li><i class="fa fa-calendar"></i>25/05/2021</li>
-                                </ul>
                             </div>
-                        </div>
-                        <div class="media">
-                            <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" width="70"></a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Mehmet Şener</h4>
-                                <ul class="list-unstyled list-inline  pull-right">
-                                    <li class="yorum"><a href="#"><i id="like" class="far fa-thumbs-up fa-2x mb-2"></i><b>80</b></a>
-                                    <li class="yorum"><a href=""><i class="fas fa-comment fa-2x"></i></a></li>
-                                </ul>
-                                <p>Çok hızlı bir gönderi yapıldı ve ürünler gösterildiği gibi geldi. Çok teşekkür ederim. Kısmetse daha sonra tekrar alışveriş yapmayı umut ediyorum.</p>
-                                <ul class="list-unstyled list-inline media-detail pull-left">
-                                    <li><i class="fa fa-calendar"></i>12/03/2021</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                        <div class="media">
-                            <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" width="70"></a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Emine Yalçın</h4>
-                                <ul class="list-unstyled list-inline pull-right">
-                                    <li class="yorum"><a href="#"><i id="like" class="far fa-thumbs-up fa-2x mb-2"></i><b>73</b></a>
-                                    <li class="yorum"><a href=""><i class="fas fa-comment fa-2x"></i></a></li>
-                                </ul>
-                                <p>Verdiğim iki sipariş zamanında teslim edildi.Siparişimle ilgili müşteri hizmetleri numarasını telefonla aradığımda her defasında görüştüm ve sorularıma cevap verildi.</p>
-                                <ul class="list-unstyled list-inline media-detail pull-left">
-                                    <li><i class="fa fa-calendar"></i>18/04/2021</li>
-
-                                </ul>
-
-                            </div>
-                        </div>
-                        <div class="media">
-                            <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" width="70"></a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Ali Korkmaz</h4>
-                                <ul class="list-unstyled list-inline pull-right">
-                                    <li class="yorum"><a href="#"><i id="like" class="far fa-thumbs-up fa-2x mb-2"></i><b>95</b></a>
-                                    <li class="yorum"><a href=""><i class="fas fa-comment fa-2x"></i></a></li>
-                                </ul>
-                                <p>Geç teslim edilmesinin ürünün sağlanmasından kaynaklandığını öğrendim(Bu durum kısa bir mesaj ile bildirilebilirdi). Güvenli bir Mağaza olarak değerlendiriyorum.</p>
-                                <ul class="list-unstyled list-inline media-detail pull-left">
-                                    <li><i class="fa fa-calendar"></i>05/05/2021</li>
-
-                                </ul>
-
-                            </div>
-                        </div>
+                        <% }) %>
                     </div>
                 </div>
-
         </section>
     </div>
 </div>

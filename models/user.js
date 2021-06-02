@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
   images: Object,
   posts: Object,
   reviews: Number,
-  comments: Object,
+  comments: { type: mongoose.Schema.Types.ObjectId, ref: "Commnet"},
   facebook: String,
   instagram: String,
   website: String,
