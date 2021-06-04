@@ -272,4 +272,8 @@ router.get("/store/:id", async (req, res) => {
   }
 });
 
+router.get("/favoriler", (req,res) => {
+  res.render('./info/favoriler');
+});
+
 module.exports = router;
