@@ -184,6 +184,10 @@ router.get("/myprofile", middleware.isLogin , async (req, res) => {
   res.render('./info/myprofile');
 });
 
+router.get("/favourites", middleware.isLogin, (req, res) => {
+  res.render("/favoriler");
+});
+
 // edit profile PUT: route
 router.put("/myprofile/edit", middleware.isLogin, upload.single("profileImage"), async (req, res) => {
   var user = {
