@@ -1,11 +1,11 @@
-.tumu1{width:1200px; height:800px; font:bold 25px verdana; color: #000; padding: 8px 0 0 0; text-align: right; background-color: #FFffff}
-.tumu1foto{width:626px; height:800px; background: url("/assets/images/plumber-pointing-lateral_1368-587.jpg");float:right; marginleft:600px;}
-.tumu1yazi{width:550px; height:100px; float:left; font:bold 50px tahoma; margin-top:230px; margin-left: -15px;}
-.buton1{width:220px; height:50px; background-color: #000000; margin-top:65px; margin-left: 180px; font:bold 15px tahoma; color:#FFFFFF; text-align: center; padding-top:30px; border-radius:30px; z-index: 1;}
+.tumu1{width:90%; height:800px; font:bold 25px verdana; color: #000; padding: 8px 0 0 0; text-align: right; background-color: #FFffff}
+.tumu1foto{width:626px; height:800px; background: url("/assets/images/plumber-pointing-lateral_1368-587.jpg");float:right; margin-left:10px;}
+.tumu1yazi{width:530px; height:100px; float:left; font:bold 55px tahoma; margin-top:230px; margin-left: 40px;}
+.buton1{width:220px; height:50px; background-color: #000000; margin-top:65px; margin-left: 200px; font:bold 15px tahoma; color:#FFFFFF; text-align: center; padding-top:13px; border-radius:30px; z-index: 1;}
 .iletisimicon{widgth:48px; height: 48px; background: url("/assets/images/icons8-chevron-right-25.png") 0 0 no-repeat; margin-left:170px; margin-top:-20px;}
 
-.tumu2{width:1024px; height:370px;}
-.kutu1{width:300px; height:250px; background-color: #122C5E; float:left; margin-top:-70px; margin-left: 85px;}
+.tumu2{width:90%; height:370px;margin-left: 10px;}
+.kutu1{width:300px; height:250px; background-color: #122C5E; float:left; margin-top:-70px; margin-left: 200px;}
 .kutu1yazi{width:200px; height:160px;  font:bold 25px muli; color:#FFFFFF; padding-top:80px;  padding-left:50px; }
 .icon1{}
 .kutu2{width:330px; height:290px; background-color: #FFFFFF; float:left; margin-top:-90px; border:2px solid #122C5E;}
@@ -15,82 +15,82 @@
 .kutu3yazi{width:200px; height:160px;  font:bold 25px muli; color:#FFFFFF; padding-top:80px;  padding-left:50px; }
 .icon1{}
 
-.tumu3{width:1024px; height:470px; background: url("")}
-.sol{width:600px; height:350px; font:bold 42px muli; color:#000; padding-top:60px; padding-left:40px; float:left;}
-.solyazi1{font: bold 45px Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"; color: #d95b27;}
-.icon1{width:170px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:80px; float:left; margin-left:30px;font: 22px muli; color:#000; padding-left:30px;}
-.icon2{width:125px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:100px; margin-left:30px;font: 22px muli; color:#000; padding-left:30px;}
-.icon3{width:125px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:-100px; margin-left:250px;font: 22px muli; color:#000; padding-left:30px;}
-.icon4{width:150px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:45px; margin-left:250px;font: 22px muli; color:#000; padding-left:30px;}
+.tumu3{width:90%; height:470px; margin-left: 60px;}
+.sol{width:600px; height:350px; font:bold 42px muli; color:#000; padding-top:40px; padding-left:100px; float:left;}
+.solyazi1{font: bold 50px Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"; color: #d95b27;}
+.icon1{width:200px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:50px; float:left; margin-left:30px;font: 22px muli; color:#000; padding-left:30px;}
+.icon2{width:165px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:120px; margin-left:30px;font: 22px muli; color:#000; padding-left:30px;}
+.icon3{width:145px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:-95px; margin-left:250px;font: 22px muli; color:#000; padding-left:30px;}
+.icon4{width:170px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:45px; margin-left:250px;font: 22px muli; color:#000; padding-left:30px;}
 
 
-.sag{width:424px; height:350px; margin-left:640px;}
+.sag{width:424px; height:350px; margin-left:650px;}
 .sagkutu1{width:200px; height:250px; border:1px solid #000; margin-left:30px; margin-top:-5px; z-index: 2; background: url("/assets/images/92478.jpg");}
 .sagkutu2{width:240px; height:150px; border:1px solid #000; margin-left:210px; margin-top:-230px; z-index: 1; background: url("/assets/images/ell-done-work_146671-9744.jpg");}
 .sagkutu3{width:270px; height:180px; border:1px solid #000; margin-left:100px; margin-top:25px; z-index: 3; background: url("/assets/images/orm-standing-holding-wrench-that-is-essential-tool-mechanic.jpg");}
 
 
-.tumu4{width:1200px; height:700px; background: url("")}
-.sol4{width:600px; height:700px; background-color:#f5d033; float:left;z-index:1;}
-.icons1{width:51px; height:51px; background: url("/assets/images/icons8-material-rounded-50.png"); border:2px solid #000; border-radius:30px; margin-left:20px; margin-top:30px;}
+.tumu4{width:100%; height:700px; margin-left:0px;}
+.sol4{width:1000px; height:700px; background-color:#f5d033; float:left;z-index:1;}
+.icons1{width:51px; height:51px; background: url("/assets/images/icons8-material-rounded-50.png"); border:2px solid #000; border-radius:30px; margin-left:40px; margin-top:30px;}
 .icons1yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:10px; margin-top:65px; }
 .icons1icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:15px; margin-top:20px; }
 
 
-.icons2{width:50px; height:50px; background: url("/assets/images/icons8-intelligence-50.png"); border:2px solid #000; border-radius:30px; margin-left:20px; margin-top:150px;}
+.icons2{width:50px; height:50px; background: url("/assets/images/icons8-intelligence-50.png"); border:2px solid #000; border-radius:30px; margin-left:40px; margin-top:150px;}
 .icons2yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:10px; margin-top:65px;}
 .icons2icerik{width:340px; height:80px; font: 20px muli; color:#000; margin-left:15px; margin-top:20px;}
 
 
-.icons3{width:50px; height:50px; background: url("/assets/images/icons8-last-24-hours-50.png"); border:2px solid #000; border-radius:30px; margin-left:20px; margin-top:150px;}
+.icons3{width:50px; height:50px; background: url("/assets/images/icons8-last-24-hours-50.png"); border:2px solid #000; border-radius:30px; margin-left:40px; margin-top:150px;}
 .icons3yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:10px; margin-top:65px;}
 .icons3icerik{width:390px; height:100px; font: 20px muli; color:#000; margin-left:15px; margin-top:20px;}
 
 
-.icons4{width:50px; height:50px; background: url("/assets/images/icons8-dotted-50.png"); border:2px solid #000; border-radius:30px; margin-left:480px; margin-top:25px;}
+.icons4{width:50px; height:50px; background: url("/assets/images/icons8-dotted-50.png"); border:2px solid #000; border-radius:30px; margin-left:570px; margin-top:25px;}
 .icons4yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:-150px; margin-top:65px;}
-.icons4icerik{width:380px; height:80px; font: 20px muli; color:#000; margin-left:-170px; margin-top:20px;}
+.icons4icerik{width:410px; height:80px; font: 20px muli; color:#000; margin-left:-180px; margin-top:20px;}
 
 
-.icons5{width:50px; height:50px; background: url("/assets/images/icons8-service-50 (1).png"); border:2px solid #000; border-radius:30px; margin-left:480px; margin-top:145px;}
+.icons5{width:50px; height:50px; background: url("/assets/images/icons8-service-50 (1).png"); border:2px solid #000; border-radius:30px; margin-left:570px; margin-top:145px;}
 .icons5yazi{width:220px; height:100px; font:bold 25px muli; color:#000; margin-left:-150px; margin-top:65px;}
-.icons5icerik{width:370px; height:80px; font: 20px muli; color:#000; margin-left:-150px; margin-top:20px;}
+.icons5icerik{width:370px; height:100px; font: 20px muli; color:#000; margin-left:-180px; margin-top:20px;}
 
 
-.icons6{width:50px; height:50px; background: url("/assets/images/icons8-ios-filled-50.png"); border:2px solid #000; border-radius:30px; margin-left:480px; margin-top:165px;}
+.icons6{width:50px; height:50px; background: url("/assets/images/icons8-ios-filled-50.png"); border:2px solid #000; border-radius:30px; margin-left:570px; margin-top:165px;}
 .icons6yazi{width:250px; height:100px; font:bold 25px muli; color:#000; margin-left:-190px; margin-top:65px;}
-.icons6icerik{width:390px; height:100px; font: 20px muli; color:#000; margin-left:-150px; margin-top:20px;}
+.icons6icerik{width:390px; height:100px; font: 20px muli; color:#000; margin-left:-140px; margin-top:20px;}
 
 
-.sag4{width:550px; height:700px; background-color:#122C5E; margin-left:600px; margin-top:-700px; float:left;}
-.resim4sag{width:713px; height:683px; background: url("/assets/images/PNG.png"); float:left; z-index:2; margin-left:-377px; margin-top:-480px;}
+.sag4{width:680px; height:700px; background-color:#122C5E; margin-left:660px; margin-top:-700px; float:left;}
+.resim4sag{width:713px; height:683px; background: url("/assets/images/PNG.png"); float:left; z-index:2; margin-left:-340px; margin-top:-480px;}
 
 
-.tumu5{width:1200px; height:600px; background: url("")}
-.baslik{width:545px; height:50px; margin-left:327px; margin-top:120px; font:bold 50px muli; color:#000;}
+.tumu5{width:100%; height:600px; text-align: center;padding-left: 65px;}
+.baslik{width:550px; height:50px; margin-left:327px; margin-top:120px; font:bold 50px muli; color:#000;}
 
-.iconn1{width:60px; height:60px; background: url("/assets/images/icons8-rating-60.png"); border:1px solid #000; border-radius:40px; margin-left:270px; margin-top:50px; float:left;}
-.iconn1yazi{width:250px; height:100px; font:bold 25px muli; color:#000; margin-left:-75px; margin-top:75px; }
-.iconn1icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:15px; margin-top:20px; }
+.iconn1{width:60px; height:60px; background: url("/assets/images/icons8-rating-60.png"); border:1px solid #000; border-radius:40px; margin-left:320px; margin-top:50px; float:left;}
+.iconn1yazi{width:250px; height:100px; font:bold 25px muli; color:#000; margin-left:-90px; margin-top:75px; }
+.iconn1icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:-100px; margin-top:20px; }
 
-.iconn2{width:60px; height:60px; background: url("/assets/images/icons8-trust-60.png"); border:1px solid #000; border-radius:40px; margin-left:520px; margin-top:-180px; float:left;}
-.iconn2yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:-20px; margin-top:75px; }
-.iconn2icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:15px; margin-top:20px; }
+.iconn2{width:60px; height:60px; background: url("/assets/images/icons8-trust-60.png"); border:1px solid #000; border-radius:40px; margin-left:540px; margin-top:-180px; float:left;}
+.iconn2yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:-70px; margin-top:75px; }
+.iconn2icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:-100px; margin-top:20px; }
 
 .iconn3{width:60px; height:60px; background: url("/assets/images/icons8-medal-60.png"); border:1px solid #000; border-radius:40px; margin-left:0; margin-top:30px; float:left;}
-.iconn3yazi{width:300px; height:100px; font:bold 25px muli; color:#000; margin-left:-90px; margin-top:75px; }
-.iconn3icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:15px; margin-top:20px; }
+.iconn3yazi{width:300px; height:100px; font:bold 25px muli; color:#000; margin-left:-110px; margin-top:75px; }
+.iconn3icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:-100px; margin-top:20px; }
 
-.iconn4{width:60px; height:60px; background: url("/assets/images/icons8-clock-60.png"); border:1px solid #000; border-radius:40px; margin-left:520px; margin-top:-180px; float:left;}
-.iconn4yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:-40px; margin-top:75px; }
-.iconn4icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:15px; margin-top:20px; }
+.iconn4{width:60px; height:60px; background: url("/assets/images/icons8-clock-60.png"); border:1px solid #000; border-radius:40px; margin-left:540px; margin-top:-180px; float:left;}
+.iconn4yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:-70px; margin-top:75px; }
+.iconn4icerik{width:430px; height:80px; font: 20px muli; color:#000; margin-left:-100px; margin-top:20px; }
 
 
-.tumu6{width:1200px; height:600px; }
-.yazi6{width:400px; height:600px; font:bold 45px muli; color:#000; float:left; margin-left:50px; margin-top:50px;}
+.tumu6{width:90%; height:600px; margin-bottom:100px; }
+.yazi6{width:400px; height:600px; font:bold 45px muli; color:#000; float:left; margin-left:120px; margin-top:50px;}
 .icon61{width:240px; height:25px; background: url("/assets/images/icons8-ok-25 (1).png") 0 0 no-repeat; margin-top:40px;font: 25px muli; color:#000;}
 .icon62{width:450px; height:25px; background: url("/assets/images/icons8-ok-25 (1).png") 0 0 no-repeat; margin-top:60px;font: 25px muli; color:#000;}
-.icon63{width:25px; height:25px; background: url("/assets/images/icons8-ok-25 (1).png") 0 0 no-repeat; margin-top:60px;font: 25px muli; color:#000;}
-.button6{width:200px; height:40px; background-color: #000000; margin-top:65px; margin-left: 10px; font:bold 20px tahoma; color:#FFFFFF; text-align: center; padding-top:10px; border-radius:10px; z-index: 1;}
+.icon63{width:450px; height:25px; padding-left:30px; background: url("/assets/images/icons8-ok-25 (1).png") 0 0 no-repeat; margin-top:60px;font: 25px muli; color:#000;}
+.button6{width:200px; height:40px; background-color: #000000; margin-top:60px; margin-left: 10px; font:bold 20px tahoma; color:#FFFFFF; text-align: center; padding-top:5px; border-radius:10px; z-index: 1;}
 
-.resim6{width:600px; height:600px; background: url("/assets/images/unnamed (1).jpg"); float:left; margin-left:550px; margin-top:-650px;}
+.resim6{width:600px; height:600px; background: url("/assets/images/unnamed (1).jpg"); float:left; margin-left:700px; margin-top:-650px;}
