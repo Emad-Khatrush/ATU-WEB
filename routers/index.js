@@ -2,12 +2,15 @@ const express    = require("express"),
       Product    = require("../models/product"),
       User       = require("../models/user"),
       Comment    = require("../models/comment"),
+      Post       = require("../models/post"),
+      Offer      = require("../models/offer"),
       middleware = require("../middleware/index"),
       async      = require("async"),
       multer     = require('multer'),
       router     = express.Router();
 
 const { storage, cloudinary } = require('../cloudinary');
+const offer = require("../models/offer");
 const upload = multer({ storage });
 
 // index route
@@ -106,8 +109,74 @@ router.post("/comment/:storeId",middleware.isLogin, async (req, res) => {
 router.get("/userprofile", middleware.isLogin, (req, res) => {
   res.render('./auth/userprofile');
 });
+
+// post GET route
+router.get("/posts", async (req, res) => {
+  const posts = await Post.find({});
+  res.render('./info/posts', { posts });
+});
+
 router.get("/addpost", middleware.isLogin, (req, res) => {
-  res.render('./auth/addpost');
+  res.render('./info/addpost');
+});
+
+router.post("/addpost", middleware.isLogin, upload.array("postImages"), async (req, res) => {
+  const post = new Post({
+    user: req.user,
+    fuelType: req.body.fuelType,
+    gear: req.body.gear,
+    city: req.body.city,
+    carYear: req.body.carYear,
+    motor: req.body.motor,
+    carState: req.body.carState,
+    message: req.body.message,
+    model: req.body.model
+  });
+  try {
+    if(req.files) {
+      const images = req.files.map(file => { return { fileName: file.filename, url: file.path } });
+      post.images = images;
+    }
+    await post.save();
+    res.redirect('/posts');
+  } catch (error) {
+    res.redirect('back');
+  }
+});
+
+router.get("/post/:id", async (req, res) => {
+  const postId = req.params.id;
+  const post = await Post.findOne({ _id : postId });
+  res.render('./info/postDetails', { post });
+});
+
+router.get("/addoffer/:id",middleware.isLogin, (req, res) => {
+  const postId = req.params.id;
+  res.render("./info/addOffer", { postId });
+});
+router.post("/addoffer/:id", middleware.isLogin, upload.array("offerImages"), async (req, res) => {
+  try {
+  var offer = new Offer({
+    createdOffer: req.user,
+    post: req.params.id,
+    price: req.body.price,
+    message: req.body.message
+  });
+  if(req.files) {
+    const images = req.files.map(file => { return { fileName: file.filename, url: file.path } });
+    offer.images = images;
+  }
+  await offer.save();
+
+  const post = await Post.findOne( { _id:  req.params.id } );
+  post.offers.push(offer);
+  await post.save();
+    res.redirect("/post/" + req.params.id );
+  } catch (error) {
+    console.log(error.message);
+    req.flash("error", error.message);
+    res.redirect("/post/" + req.params.id);
+  }
 });
 
 // myprofile Get route

@@ -32,6 +32,7 @@
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 <header>
+  
     <div class="content-holder">
         <div class="layer-one">
             <div class="page-titles">
@@ -44,20 +45,17 @@
     </div>
 </header>
 <div id="page-content">
-
     <section id="car-pagination">
         <div class="content-holder">
             <div class="page-main-heading extra-space">
                 <div class="heading-location">
-                    <h2><span class="bold">Mercedes-Benz</span> CLS 320</h2>
+                    <h2><span class="bold"><%= post.model %> </span></h2>
                     <p class="page-location">
-                        <a href="index.html">Home </a>
+                        <a href="/">Home </a>
                         <span class="greater-than">&gt;&gt;</span>
-                        <a href="car-list.html">Cars</a>
+                        <a href="/posts">posts</a>
                         <span class="greater-than">&gt;&gt;</span>
-                        <a href="#">Mercedes-Benz</a>
-                        <span class="greater-than">&gt;&gt;</span>
-                        <a href="#">Mercedes-Benz CLS 320</a>
+                        <a href="#"><%= post.model %></a>
                     </p>
                 </div>
 
@@ -83,13 +81,10 @@
 
     <section id="car-details">
 
-        <div class="social-icons-round">
+        <div class="social-icons-round" style="padding: 10px;">
             <p>Share to:</p>
-            <ul>
-                <li class="facebook"><a href="#">Facebook</a></li>
-                <li class="twitter"><a href="#">Twitter</a></li>
-                <li class="google"><a href="#">Gmail</a></li>
-            </ul>
+            <p>Share to:</p>
+            <h1>dsfdf</h1>
         </div>
         <div class="content-holder">
             <div class="full-width google-maps dealer-maps vehicle-location">
@@ -101,58 +96,49 @@
                 <div class="car-full-image one-half col-480">
                     <div class="main-image">
                         <a href="#">
-                            <img src="/adverts/images/mercedes_full.jpg" alt="Full Picture" />
+                            <img src="<%= post.images[0].url %>" alt="Full Picture" />
                             <span class="magnifying-glass">Magnifying Glass</span>
                         </a>
                     </div>
                     <ul class="images-navigation">
-                        <li><a href="/adverts/images/mercedes_full.jpg"><img src="/adverts/images/mercedes_thumb_list_item.jpg" alt="Thumb Car" /></a></li>
-                        <li><a href="/adverts/images/mercedes_full1.jpg"><img src="/adverts/images/mercedes_thumb_list_item1.jpg" alt="Thumb Car" /></a></li>
-                        <li><a href="/adverts/images/mercedes_full2.jpg"><img src="/adverts/images/mercedes_thumb_list_item2.jpg" alt="Thumb Car" /></a></li>
-                        <li><a href="/adverts/images/mercedes_full3.jpg"><img src="/adverts/images/mercedes_thumb_list_item3.jpg" alt="Thumb Car" /></a></li>
-                        <li><a href="/adverts/images/mercedes_full4.jpg"><img src="/adverts/images/mercedes_thumb_list_item4.jpg" alt="Thumb Car" /></a></li>
+                        <% post.images.forEach( img => { %>
+                           <li><a href="<%= img.url %>"><img src="<%= img.url %>" alt="Thumb Car" /></a></li>
+                        <% }) %> 
                     </ul>
                     <div id="preloader"></div>
                 </div>
 
                 <div class="car-full-specs one-half col-460">
                     <div class="price-car">
-                        <span class="price-tag">Hasarlı</span>
+                        <span class="price-tag"><%= post.carState %></span>
                     </div>
                     <ul class="car-specs-list">
                         <li>
                             <span class="label">Model</span>
-                            <span class="value">Mercedes-Benz CLS 320, Coupe</span>
+                            <span class="value"><%= post.model %></span>
                         </li>
                         <li>
                             <span class="label">Yıl:</span>
-                            <span class="value">2010</span>
+                            <span class="value"><%= post.carYear %></span>
                         </li>
                         <li>
                             <span class="label">Yakıt Türü:</span>
-                            <span class="value">Diesel</span>
+                            <span class="value"><%= post.fuelType %></span>
                         </li>
                         <li>
                             <span class="label">Motor:</span>
-                            <span class="value">3200 cm³ (373 kW / 507 CP)</span>
+                            <span class="value"><%= post.motor %></span>
                         </li>
                         <li>
                             <span class="label">Vites:</span>
-                            <span class="value">Otomatik</span>
-                        </li>
-                        <li>
-                            <span class="label">Renk:</span>
-                            <span class="value">Black</span>
-                        </li>
-                        <li>
-                            <span class="label">Kasa:</span>
-                            <span class="value">4/5</span>
+                            <span class="value"><%= post.gear %></span>
                         </li>
                     </ul>
 
                     <div class="sell-similar-car">
                         <span class="label">Teklif vermek ister misiniz?</span>
-                        <a href="add-vehicle.html" class="value"> Teklif Ver</a>
+                        <a href="/addoffer/<%= post._id %> " class="value"> Teklif Ver</a>
+                     
                     </div>
                 </div>
             </div>
@@ -162,35 +148,12 @@
 
                     <h3><span class="bold">İlan Hakkında</span></h3>
                     <ul>
-                        <li><strong>Araç Bilgisi: </strong>alloy wheels, xenon headlights, fog lights, tinted glass</li>
+                        <li><strong>Araç Bilgisi: </strong> <%= post.model %>  </li>
                         <li><strong>Hasarlı Kısımlar: </strong>service book</li>
                         <li><strong>İstenilenler: </strong>ABS, traction control, alarm, airbags, immobilizer, anti-theft, ESP, EDS, protection framework</li>
-                        <li><strong>Hasar Hakkında: </strong>electric windows, electric mirrors, air conditioning, leather upholstery, navigation system, central locking, radio / CD, power steering,
-                            onboard computer, cruise control, heated seats, rain sensor, steering wheel controls, parking sensors</li>
+                        <li><strong>Hasar Hakkında: </strong> <%= post.message %>  </li>
                     </ul>
 
-                    <hr />
-
-                    <h3><span class="bold">Daha Fazlası</span></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet fringilla metus, a ultricies ligula consequat at.
-                        Maecenas eget massa at eros ornare rhoncus. In sit amet enim risus, in mattis felis. Donec lorem arcu, tempor quis fermentum et, viverra in turpis.
-                        Nam non nunc vitae justo tincidunt lobortis eu sit amet dui. Nam ut dui aliquet nisl fermentum mollis sit amet eget lectus.
-                        Vivamus iaculis massa sit amet velit convallis aliquam. Vestibulum dolor erat, congue nec viverra eget, aliquet sit amet nunc. Donec vitae arcu orci.</p>
-                    <!--<br />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet fringilla metus, a ultricies ligula consequat at.
-                    Maecenas eget massa at eros ornare rhoncus. In sit amet enim risus, in mattis felis. Donec lorem arcu, tempor quis fermentum et, viverra in turpis.
-                    Nam non nunc vitae justo tincidunt lobortis eu sit amet dui. Nam ut dui aliquet nisl fermentum mollis sit amet eget lectus.
-                    Vivamus iaculis massa sit amet velit convallis aliquam. Vestibulum dolor erat, congue nec viverra eget, aliquet sit amet nunc. Donec vitae arcu orci.</p>-->
-
-                    <hr />
-
-                    <h3><span class="bold">İletişim Bilgileri</span></h3>
-                    <p class="heading-note">AutoMarket does not store additional information about the seller except for those contained in the announcement.</p>
-                    <br />
-                    <ul class="icon-list">
-                        <li class="phone">0040 742 016 756</li>
-                        <li class="address">Berlin, Germany, nr. 250330, main street</li>
-                    </ul>
                 </div>
 
             </div>
