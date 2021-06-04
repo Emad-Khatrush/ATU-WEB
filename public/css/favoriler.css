@@ -1,0 +1,68 @@
+.baslik{width:80%; height:90px; font:bold 35px muli; color:#000; padding-top:30px; border-bottom: 1px solid #ddd; margin:10px; text-align: center; margin-left:130px; }
+
+.favori1{width:70%; height: 170px; border-bottom: 1px solid #ddd; margin-left:200px;}
+.favori1resim{width:150px; height:150px; background: url("/assets/images/Untitled-5.jpg"); margin-top:5px; margin-left: 20px; border:1px solid #000;float:left;}
+.favori1ilanadi{width:250px; height:30px; font:bold 20px muli; color:#000; float:left; margin-top:20px; margin-left: 50px;}
+.favori1fiyat{width:200px; height:30px; font: 18px muli; color:#000; float:left; margin-top:70px; margin-left: 30px;}
+.favori1yildiz{width: 88px; height:20px; font: 20px muli; color:#000; float:left; margin-top:85px; margin-left: -90px; background: url("/assets/images/icons8-star-20.png")}
+.favori1deger{width:250px; height:30px; font: 15px muli; color:#000; float:left; margin-top:60px; margin-left:-55px;}
+.favori1ekleme{width:200px; height:30px; font: 15px muli; color:#6B6B6B; float:left; margin-top:120px; margin-left: -680px;}
+.favori1sil{width:25px; height:30px; font: 15px muli; color:#000; float:left; margin-top:-40px; margin-left: 670px;}
+.favori1silicon{width:25px; height:25px; font: 15px muli; color:#000; float:left; margin-top:-45px; margin-left: 700px; background: url("/assets/images/icons8-delete-25.png"); border:1px solid #6B6B6B; }
+.favori1sepeteekleme{width:150px; height:30px; font: 15px muli; color:#000; float:left; text-align: left; padding-top:12px; padding-left:15px; margin-top:-65px; margin-left: 750px; background: #EACD19; }
+.favori1sepeticon{width:25px; height:25px; margin-top:-23px; margin-left: 115px;background: url("/assets/images/icons8-shopping-cart-25.png") 0 0 no-repeat;}
+
+
+
+.favori2{width:70%; height: 180px; border-bottom: 1px solid #ddd;margin-left:200px; }
+.favori2resim{width:150px; height:150px; background: url("/assets/images/Untitled-3.jpg"); margin-top:15px;  margin-left: 20px; border:1px solid #000;float:left;}
+.favori2ilanadi{width:250px; height:30px; font:bold 20px muli; color:#000; float:left; margin-top:20px; margin-left: 50px;}
+.favori2fiyat{width:200px; height:30px; font: 18px muli; color:#000; float:left; margin-top:70px; margin-left: 30px;}
+.favori2yildiz{width: 60px; height:20px; font: 20px muli; color:#000; float:left; margin-top:85px; margin-left: -75px; background: url("/assets/images/icons8-star-20.png")}
+.favori2deger{width:250px; height:30px; font: 15px muli; color:#000; float:left; margin-top:60px; margin-left:-50px;}
+.favori2ekleme{width:200px; height:30px; font: 15px muli; color:#6B6B6B; float:left; margin-top:125px; margin-left: -685px;}
+.favori2sil{width:25px; height:30px; font: 15px muli; color:#000; float:left; margin-top:-30px; margin-left: 670px;}
+.favori2silicon{width:25px; height:25px; font: 15px muli; color:#000; float:left; margin-top:-35px; margin-left: 700px; background: url("/assets/images/icons8-delete-25.png"); border:1px solid #6B6B6B; }
+.favori2sepeteekleme{width:150px; height:30px; font: 15px muli; color:#000; float:left; text-align: left; padding-top:12px; padding-left:15px; margin-top:-65px; margin-left: 750px; background: #EACD19; }
+.favori2sepeticon{width:25px; height:25px; margin-top:-23px; margin-left: 115px;background: url("/assets/images/icons8-shopping-cart-25.png") 0 0 no-repeat;}
+
+
+
+.favori3{width:70%; height: 180px; border-bottom: 1px solid #ddd; margin-left:200px;}
+.favori3resim{width:150px; height:150px; background:url("/assets/images/Untitled-1.jpg"); margin-top:15px; margin-bottom:15px;margin-left: 20px; border:1px solid #000;float:left;}
+.favori3ilanadi{width:250px; height:30px; font:bold 20px muli; color:#000; float:left; margin-top:20px; margin-left: 50px;}
+.favori3fiyat{width:200px; height:30px; font: 18px muli; color:#000; float:left; margin-top:70px; margin-left: 30px;}
+.favori3yildiz{width: 90px; height:20px; font: 20px muli; color:#000; float:left; margin-top:85px; margin-left: -80px; background: url("/assets/images/icons8-star-20.png")}
+.favori3deger{width:250px; height:30px; font: 15px muli; color:#000; float:left; margin-top:60px; margin-left:-55px;}
+.favori3ekleme{width:200px; height:30px; font: 15px muli; color:#6B6B6B; float:left; margin-top:125px; margin-left: -685px;}
+.favori3sil{width:25px; height:30px; font: 15px muli; color:#000; float:left; margin-top:-35px; margin-left: 670px;}
+.favori3silicon{width:25px; height:25px; font: 15px muli; color:#000; float:left; margin-top:-40px; margin-left: 700px; background: url("/assets/images/icons8-delete-25.png"); border:1px solid #6B6B6B; }
+.favori3sepeteekleme{width:150px; height:30px; font: 15px muli; color:#000; float:left; text-align: left; padding-top:12px; padding-left:15px; margin-top:-80px; margin-left: 750px; background: #EACD19; }
+.favori3sepeticon{width:25px; height:25px; margin-top:-23px; margin-left: 115px;background: url("/assets/images/icons8-shopping-cart-25.png") 0 0 no-repeat;}
+
+
+
+.favori4{width:70%; height: 180px; border-bottom: 1px solid #ddd; margin-left:200px;}
+.favori4resim{width:150px; height:150px; background: url("/assets/images/Untitled-4.jpg"); margin-top:15px; margin-bottom:15px;margin-left: 20px; border:1px solid #000;float:left;}
+.favori4ilanadi{width:250px; height:30px; font:bold 20px muli; color:#000; float:left; margin-top:20px; margin-left: 50px;}
+.favori4fiyat{width:200px; height:30px; font: 18px muli; color:#000; float:left; margin-top:70px; margin-left: 30px;}
+.favori4yildiz{width: 100px; height:20px; font: 20px muli; color:#000; float:left; margin-top:85px; margin-left: -80px; background: url("/assets/images/icons8-star-20.png")}
+.favori4deger{width:250px; height:30px; font: 15px muli; color:#000; float:left; margin-top:60px; margin-left:-55px;}
+.favori4ekleme{width:200px; height:30px; font: 15px muli; color:#6B6B6B; float:left; margin-top:125px; margin-left: -695px;}
+.favori4sil{width:25px; height:30px; font: 15px muli; color:#000; float:left; margin-top:-35px; margin-left: 670px;}
+.favori4silicon{width:25px; height:25px; font: 15px muli; color:#000; float:left; margin-top:-40px; margin-left: 700px; background: url("/assets/images/icons8-delete-25.png"); border:1px solid #6B6B6B; }
+.favori4sepeteekleme{width:150px; height:30px; font: 15px muli; color:#000; float:left; text-align: left; padding-top:12px; padding-left:15px; margin-top:-80px; margin-left: 750px; background: #EACD19; }
+.favori4sepeticon{width:25px; height:25px; margin-top:-23px; margin-left: 115px;background: url("/assets/images/icons8-shopping-cart-25.png") 0 0 no-repeat;}
+
+
+.favori5{width:70%; height: 180px; border-bottom: 1px solid #ddd; margin-left:200px; margin-bottom:150px;}
+.favori5resim{width:150px; height:150px; background: url("/assets/images/Untitled-2.jpg"); margin-top:15px; margin-bottom:15px;margin-left: 20px; border:1px solid #000;float:left;}
+.favori5ilanadi{width:250px; height:30px; font:bold 20px muli; color:#000; float:left; margin-top:20px; margin-left: 50px;}
+.favori5fiyat{width:200px; height:30px; font: 18px muli; color:#000; float:left; margin-top:70px; margin-left: 30px;}
+.favori5yildiz{width: 48px; height:20px; font: 20px muli; color:#000; float:left; margin-top:85px; margin-left: -80px; background: url("/assets/images/icons8-star-20.png")}
+.favori5deger{width:250px; height:30px; font: 15px muli; color:#000; float:left; margin-top:60px; margin-left:-55px;}
+.favori5ekleme{width:200px; height:30px; font: 15px muli; color:#6B6B6B; float:left; margin-top:125px; margin-left: -680px;}
+.favori5sil{width:25px; height:30px; font: 15px muli; color:#000; float:left; margin-top:-30px; margin-left: 670px;}
+.favori5silicon{width:25px; height:25px; font: 15px muli; color:#000; float:left; margin-top:-35px; margin-left: 700px; background: url("/assets/images/icons8-delete-25.png"); border:1px solid #6B6B6B; }
+.favori5sepeteekleme{width:150px; height:30px; font: 15px muli; color:#000; float:left; text-align: left; padding-top:12px; padding-left:15px; margin-top:-80px; margin-left: 750px; background: #EACD19; }
+.favori5sepeticon{width:25px; height:25px; margin-top:-23px; margin-left: 115px;background: url("/assets/images/icons8-shopping-cart-25.png") 0 0 no-repeat;}
