@@ -4,7 +4,7 @@
 .buton1{width:220px; height:50px; background-color: #000000; margin-top:65px; margin-left: 200px; font:bold 15px tahoma; color:#FFFFFF; text-align: center; padding-top:13px; border-radius:30px; z-index: 1;}
 .iletisimicon{widgth:48px; height: 48px; background: url("/assets/images/icons8-chevron-right-25.png") 0 0 no-repeat; margin-left:170px; margin-top:-20px;}
 
-.tumu2{width:90%; height:370px;margin-left: 10px;}
+.tumu2{width:90%; height:370px;margin-left: 10px; margin-bottom:-50px;}
 .kutu1{width:300px; height:250px; background-color: #122C5E; float:left; margin-top:-60px; margin-left: 200px; padding-left: -15px;  }
 .numara1{font: bold 55px muli; color: #fff; margin-top:30px; margin-left: 150px; }
 .baslik1{font: bold 25px muli; color: #fff; margin-top:30px; margin-left: 35px;}
@@ -21,21 +21,20 @@
 .kutu3yazi{width:300px; height:120px;  font:bold 18px muli; color:#FFFFFF; padding-top:40px;  padding-left:30px; }
 
 .tumu3{width:90%; height:470px; margin-left: 60px;}
-.sol{width:600px; height:350px; font:bold 42px muli; color:#000; padding-top:40px; padding-left:100px; float:left;}
+.sol{width:700px; height:350px; font:bold 42px muli; color:#000; padding-top:-240px; padding-left:-250px; float:left;}
 .solyazi1{font: bold 50px Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"; color: #d95b27;}
 .icon1{width:200px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:50px; float:left; margin-left:30px;font: 22px muli; color:#000; padding-left:30px;}
 .icon2{width:165px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:120px; margin-left:30px;font: 22px muli; color:#000; padding-left:30px;}
 .icon3{width:145px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:-95px; margin-left:250px;font: 22px muli; color:#000; padding-left:30px;}
 .icon4{width:170px; height:25px; background: url("/assets/images/icons8-ok-25.png") 0 0 no-repeat; margin-top:45px; margin-left:250px;font: 22px muli; color:#000; padding-left:30px;}
 
-
-.sag{width:424px; height:350px; margin-left:650px;}
+.sag{width:424px; height:350px; margin-left:750px;}
 .sagkutu1{width:200px; height:250px; border:1px solid #000; margin-left:30px; margin-top:-5px; z-index: 2; background: url("/assets/images/92478.jpg");}
 .sagkutu2{width:240px; height:150px; border:1px solid #000; margin-left:210px; margin-top:-230px; z-index: 1; background: url("/assets/images/ell-done-work_146671-9744.jpg");}
 .sagkutu3{width:270px; height:180px; border:1px solid #000; margin-left:100px; margin-top:25px; z-index: 3; background: url("/assets/images/orm-standing-holding-wrench-that-is-essential-tool-mechanic.jpg");}
 
 
-.tumu4{width:100%; height:700px; margin-left:0px;}
+.tumu4{width:100%; height:700px; margin-left:0px; margin-top:120px;}
 .sol4{width:1000px; height:700px; background-color:#f5d033; float:left;z-index:1;}
 .icons1{width:51px; height:51px; background: url("/assets/images/icons8-material-rounded-50.png"); border:2px solid #000; border-radius:30px; margin-left:40px; margin-top:30px;}
 .icons1yazi{width:200px; height:100px; font:bold 25px muli; color:#000; margin-left:10px; margin-top:65px; }

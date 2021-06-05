@@ -1,0 +1,19 @@
+.footer{width: 100%; height: 325px; margin: 0 0 0 0; background:#000; z-index:0;}
+.sol{width: 220px; height: 180px;color:#fff; font:bold 14px muli; padding-top:50px; padding-left:70px; float:left; margin-left:100px;}
+.sag{width: 250px; height: 200px;color:#fff; font:bold 14px muli; padding-top:50px; padding-left:70px; float:left; margin-left:130px;}
+.ulasım{width: 150px; height: 20px;color:#fff; font:bold 14px muli; padding-top:50px; padding-left:-350px; float:left; margin-left:200px;}
+.buton{width:150px; height:50px; background: #000; border:4px outset #ddd; margin-left:1100px; font:bold 14px muli; color:#fff; text-align: center; padding-top:13px; }
+.butonbosluk{width:150px; height:250px; padding-top:170px; margin-left:-200px;}
+.icon{width:110px; height:40px; margin-top:-200px; margin-left:1150px; z-index:1; background:#000}
+.iconins{width:30px; height:30px; background: url("/assets/images/icons8-instagram-30.png"); position:absolute; float:left; }
+.iconface{width:30px; height:30px; background: url("/assets/images/icons8-facebook-30.png");margin-left: 60px;}
+.border{width:85%; height:1px; border-bottom: 1px solid #ddd; margin-left:80px; margin-top:170px;}
+.navkutu{width:27px; height:33px; background: #fff; margin-top:35px; margin-left:90px; z-index:1; color:#fff; font:bold 11px muli}
+.nav{width:40px; height:37px; background: url("/assets/images/icons8-marker-a-35.png") 0 0 no-repeat; margin-top:-16px; margin-left:-4px;}
+.ulke{width:200px; height:30px; background: #000; margin-top:-22px; margin-left:50px; z-index:1; color:#808080; font:bold 12px muli; padding-top: 10px;}
+.hak{width:250px; height:35px; background: #000; margin-top:-30px; margin-left:200px; z-index:1; color:#808080; font:bold 13px muli; padding-top: 10px;}
+
+.rehber{width:50px; height:10px; background: #000; margin-top:-31px; margin-left:640px; z-index:1; color:#808080; font: 13px muli; padding-top: 10px;}
+.sart{width:110px; height:10px; background: #000; margin-top:-8px; margin-left:720px; z-index:1; color:#808080; font: 13px muli; padding-top: 10px;}
+.sirket{width:110px; height:10px; background: #000; margin-top:-11px; margin-left:840px; z-index:1; color:#808080; font: 13px muli; padding-top: 10px;}
+.gizlilik{width:250px; height:10px; background: #000; margin-top:-11px; margin-left:950px; z-index:1; color:#808080; font: 13px muli; padding-top: 10px;}
