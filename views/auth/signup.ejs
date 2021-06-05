@@ -34,64 +34,76 @@
             </div>
         </div>
         <div class="form-inner">
-            <form action="#" class="login">
-
+            <form action="/signup" method="POST" class="login">
                 <div class="field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Kullanıcı Adı" required>
+                    <input type="text" placeholder="Kullanıcı Adı" name="username" required>
+                </div>
+                <div class="field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Ad" name="firstName" required>
+                </div>
+                <div class="field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Soyad" name="lastName" required>
                 </div>
 
                 <div class="field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Mail Adresi" required>
+                    <input type="email" placeholder="Mail Adresi" name="email" required>
                 </div>
 
                 <div class="field">
-
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Şifre" required>
+                    <i class="fas fa-phone-alt"></i>
+                    <input type="number" placeholder="Telefon numarası" name="phone" required>
                 </div>
+
                 <div class="field">
-
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Şifre Tekrar" required>
+                    <input type="password" placeholder="Şifre" name="password" required>
                 </div>
 
-
+                <div class="field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Şifre Tekrar" name="password2" required>
+                </div>
 
                 <input type="submit" class="btnup solid" value="Kaydol">
-
             </form>
-            <form action="#" class="signup">
+
+            <form action="/signup" method="POST" class="signup">
                 <div class="field">
                     <i class="fas fa-store"></i>
-                    <input type="text" placeholder="Mağaza Adı" required>
+                    <input type="text" placeholder="Mağaza Adı" name="storeName" required>
                 </div>
                 <div class="field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Kullanıcı Adı" required>
+                    <input type="text" placeholder="Kullanıcı Adı" name="username" required>
                 </div>
 
                 <div class="field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Mail Adresi" required>
+                    <input type="email" placeholder="Mail Adresi" name="email" required>
                 </div>
 
                 <div class="field">
+                    <i class="fas fa-phone-alt"></i>
+                    <input type="number" placeholder="Telefon numarası" name="phone" required>
+                </div>
 
+                <div class="field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Şifre" required>
+                    <input type="password" placeholder="Şifre" name="password" required>
                 </div>
                 <div class="field">
-
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Şifre Tekrar" required>
+                    <input type="password" placeholder="Şifre Tekrar" name="password2" required>
                 </div>
                 <div class="field">
-
                     <i class="fas fa-home"></i>
-                    <textarea name="adres" id="adres" cols="30" rows="2" placeholder="Adres"></textarea>
+                    <textarea id="adres" cols="30" rows="2" placeholder="Adres" name="address"></textarea>
                 </div>
+                <input type="hidden" value="store" name="type">
                 <input type="submit" class="btnup solid" value="Kaydol">
             </form>
         </div>

@@ -1,0 +1,127 @@
+.col-sm-4{
+    padding: 30px;
+}
+.col-sm-8{
+    padding: 30px;
+
+}
+
+#product{
+    cursor: pointer;
+    border-radius: 4px;
+    width:auto;
+    outline: none;
+    border: 1px solid #bab8b8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 50px;
+}
+.filter{
+    cursor: pointer;
+    border-radius:3px;
+    border:1px solid #bab8b8;
+    background-color: #32a3ff;
+}
+.sepet{
+    cursor: pointer;
+    border-radius:3px;
+    border:1px solid #bab8b8;
+    background-color: white;
+    margin:0 5px;
+    font-size: 20px;
+}
+#arac{
+    border:1px solid #bab8b8;
+    outline: none;
+    cursor: pointer;
+    margin:0 5px;
+    width: auto;
+    margin-right: 50px;
+}
+.fa-star::before{
+    color: #ffdf00;
+}
+.fa-star-half-alt{
+    color:#ffdf00
+}
+.card-title{
+    font-weight:50;
+    font-size: 30px;
+}
+img{
+    opacity:1;
+
+}
+img:hover{
+    opacity: 0.4;
+}
+.page-item{
+    margin-bottom: 50px;
+
+}
+.page-item:hover{
+    opacity: 0.6;
+}
+.fas.fa-shipping-fast{
+    cursor: pointer;
+    color:gold
+}
+a.store{
+    text-decoration: none;
+    font-size: 17px;
+}
+a.store:hover{
+    text-decoration:underline;
+}
+button.btn.btn-primary.btn-lg{
+    margin: 28px 50px;
+
+}
+h4 a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 245, 245);
+    text-decoration: none;
+    border:1px solid black;
+    background-color: black;
+    border-radius: 6px;
+}
+h3 a:hover{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+}
+.menu{
+    margin-bottom: 50px;
+}
+img.img-thumbnail{
+    width: 250px;
+    display: flex;
+
+}
+div.carousel-item.active{
+    display: flex;
+    justify-content: center;
+}
+img.img-thumbnail:hover{
+    z-index:2; -webkit-transform: scale(1.5); -ms-transform: scale(1.5); -moz-transform: scale(1.5); transform: scale(1.5);
+
+}
+p i.fas.fa-lira-sign{
+    cursor: pointer;
+    color:rgb(185, 12, 12);
+
+}
+p i.fas.fa-lira-sign:hover{
+    text-decoration: underline;
+}
+del{
+    font-size: 15px;
+    color:black;
+    cursor: pointer;
+    margin-top: 30px;
+}
+div.col-md-4{
+    margin-bottom:28px ;
+}
+.card{
+    height: 760px;
+}

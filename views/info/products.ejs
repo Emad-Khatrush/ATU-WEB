@@ -1,0 +1,123 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/sources/bootstrap.css">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+<div class="container">
+    <%- include ('../partails/navbar') -%>
+    <div class="row">
+        <div class="col-sm-4 ">
+            <select class="form-select" name="product" id="product">
+                <option value="tüm">Tüm ürünler</option>
+                <option value="Akü">Akü</option>
+                <option value="Yağ">Araç Yağı</option>
+                <option value="Alarm">Alarm</option>
+                <option value="lastik">Lastik</option>
+                <option value="müzik">Müzik Sistemi</option>
+                <option value="cam">Cam Filmi</option>
+            </select>
+        </div>
+        <div class="col-sm-8 d-flex justify-content-end">
+            <button class="sepet"><i class="fas fa-shopping-cart" title="Sepetim"></i></button>
+            <button class="filter"><i class="fas fa-filter"></i></button>
+            <select class="form-select" name="arac" id="arac">
+                <option class="secenek" value="Yeni">Yeni Ürünler</option>
+                <option class="secenek" value="yüksek">Yüksek Puanlılar</option>
+                <option class="secenek" value="a'z">A'dan Z'ye</option>
+                <option class="secenek" value="teslimat">Hızlı Teslimat</option>
+                <option class="secenek " value="indirim">İndirimli</option>
+            </select>
+        </div>
+        <h1 class="d-flex justify-content-center my-5">Ürünler</h1>
+    </div>
+    <div class="row">
+        <% products.forEach( (product, index) => { %>
+            <div class="col-md-4">
+                <div class="card">
+                    <div id="carouselExampleDark-<%= index %>" class="carousel carousel-dark slide " data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark-<%= index %>" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark-<%= index %>" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <% product.images.forEach((img, i) => { %>
+                                <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                                    <img src="<%= img.url %> " class="img-thumbnail"
+                                         alt="...">
+                                </div>
+                            <% }); %> 
+                            
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-<%= index %>"
+                                    data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-<%= index %>"
+                                    data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-center"> <%= product.title %>  </h5>
+                        <div class="icon d-flex justify-content-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            <p>(176)</p>
+                        </div>
+                        <p class="card-text"><%= product.description %></p>
+                        <p class="card-text"><b>Bu Ürünün Satıcısı : </b><a class="store" href="/store/<%= product.user._id %>"> <%= product.user.storeName %>  </a><i
+                                    class="fas fa-shipping-fast fa-2x mx-3" title="Hızlı Teslimat"></i></p>
+                    </div>
+                    <div class="fiyat">
+                        <p class="d-flex justify-content-center"><i class="fas fa-lira-sign fa-2x"><b><%= product.price %></b></i></p>
+                        <del class="d-flex justify-content-center"><i class="fas fa-lira-sign fa-1x"></i><b>340.25</b></del>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg"> Ürün Detayı </button>
+                </div>
+            </div>
+        <% }) %>
+
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center footer">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#">Önceki</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item active" aria-current="page">
+                            <span class="page-link">3</span>
+                        </li>
+                        <li class="page-item">
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item">
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Sonraki</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+                crossorigin="anonymous">
+        </script>
+
+
+<%- include ('../partails/footer') -%>

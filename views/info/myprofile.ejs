@@ -1,0 +1,185 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <form id="contact-form" role="form" action="/myprofile/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="row resim">
+
+         <div class="col-5 d-flex justify-content-end my-4">
+                <img src="<%= currentUser.image.url ? currentUser.image.url : 'https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg' %>" alt="logo"/>
+          </div>
+            <div class="col-7  my-5">
+                <h6> <%= currentUser.username %>  </h6>
+                <label class="link" for="file_input_id">Profil Fotoğrafını Değiştir</label>
+                <input type="file" id="file_input_id" name="profileImage" style="display: none;">
+            </div>
+        </div>
+
+    <!-- flash messages -->
+        <div class="container" style="width: 75%; margin: auto;">
+            <% if(error && error.length > 0){ %>
+                <div style="margin-top: 10px;" class="alert alert-danger" role="alert">
+                <%= error %>
+                    </div>
+            <% } %>
+                <% if(success && success.length > 0) { %>
+                    <div style="margin-top: 10px;" class="alert alert-success" role="alert">
+                        <%= success %>
+                </div>
+                <% } %>
+        </div>
+    <!-- flash messages end-->
+
+    
+        <div class="controls">
+            <h2> Kişisel Bilgiler </h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_name">Kullanıcı Adı </label> 
+                        <input id="form_name" value="<%= currentUser.username %>" type="text" name="username" class="form-control" required="required" data-error="Firstname is required."> 
+                    </div>
+                </div>
+                <% if( currentUser.userType === "store") { %>
+                    <div class="col-md-6">
+                        <div class="form-group"> 
+                            <label for="form_lastname">Mağaza Adı</label> 
+                            <input id="form_lastname" value="<%= currentUser.storeName %>" type="text" name="storeName" class="form-control" required="required" data-error="Lastname is required."> </div>
+                    </div>
+                <% } %> 
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_email">E-mail</label> 
+                        <input id="form_email" value="<%= currentUser.email %>" type="email" name="email" class="form-control" required="required" data-error="Valid email is required."> </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_adress">Adres</label> 
+                        <input id="form_adress" value="<%= currentUser.address %>" type="text" name="address" class="form-control"  required="required" data-error="Valid adress is required."> </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_tel">Telefon Numarası</label> 
+                        <input id="form_tel" value="<%= currentUser.phone %>" type="number" name="phone" class="form-control" required="required" data-error="Valid tel is required."> </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_text">Açıklaması</label> 
+                        <input id="form_text" value="<%= currentUser.description %>" type="text" name="description" class="form-control" data-error="Valid text is required."> </div>
+                </div>
+            </div>
+        </br>
+        </br>
+
+        <% if( currentUser.userType === "store") { %>
+            <div class="row">
+                <h2> Sosyal Medya Linkleri</h2>
+            </br>
+        </br>
+                <div class="col-md-4">
+                    <div class="form-group"> 
+                        <label for="form_tel">Website</label> 
+                        <input id="form_tel" value="<%= currentUser.website %>" type="text" name="website" class="form-control" data-error="Valid tel is required."> 
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group"> 
+                        <label for="form_text">Facebook link</label> 
+                        <input id="form_text" value="<%= currentUser.facebook %>" type="text" name="facebook" class="form-control" data-error="Valid text is required."> 
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group"> 
+                        <label for="date">Instagram Link</label>
+                        <input id="date" value="<%= currentUser.instagram %>" type="text" name="instagram" class="form-control" data-error="Valid date is required."> 
+                    </div>
+                </div>
+
+            </div>            
+        <% } %> 
+
+        <% if( currentUser.userType === "buyer") { %>
+            <div class="row">
+                <h2> Arabanın Bilgileri </h2>
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_tel">Araç Yılı</label> 
+                        <input id="form_tel" value="<%= currentUser.carYear %>" type="number" name="carYear" class="form-control" data-error="Valid tel is required."> 
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_text">Araba Markası</label> 
+                        <input id="form_text" value="<%= currentUser.carModel %>" type="text" name="carModel" class="form-control" data-error="Valid text is required."> 
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="date">Son Bakım Tarihi</label>
+                        <input id="date" value="<%= currentUser.maintenanceDate %>" type="date" name="maintenanceDate" class="form-control" data-error="Valid date is required."> 
+                    </div>
+                </div>
+
+            </div>            
+        <% } %> 
+
+            <div class="row">
+                <div class="col-md-6"> <input type="submit" class="btn btn-primary btn-send pt-2 btn-block mt-3" value="Profili Düzenle"> </div>
+            </div>
+
+        </div>
+    </form>
+    <div class="row resim">
+
+        <div class="col-5 d-flex justify-content-end my-4 ">
+            <img src="https://img.favpng.com/4/1/4/computer-icons-password-clip-art-png-favpng-5weYvgygQzCc0HYimtGJndN4X_t.jpg" alt=”resim hakkında bilgi”/>
+        </div>
+        <div class="col-7  my-5">
+            <h5>Şifre Değiştir</h5>
+        </div>
+    </div>
+
+    <form id="contact-form" role="form" action="/myprofile/edit/password" method="POST">
+        <div class="controls">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_newpassword">Yeni Şifre</label> 
+                        <input id="form_newpassword" type="password" name="newPassword1" class="form-control" required="required" data-error="Valid password is required."> </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                        <label for="form_newpassword1">Yeni Şifre Tekrarı</label> 
+                        <input id="form_newpassword1" type="password" name="newPassword2" class="form-control"  required="required" data-error="Valid new_password is required."> </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"> <input type="submit" class="btn btn-primary btn-send pt-2 btn-block mt-3" value="Şifreyi Değiştir"> </div>
+            </div>
+        </div>
+    </form>
+</br>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+<%- include ('../partails/footer') -%>
