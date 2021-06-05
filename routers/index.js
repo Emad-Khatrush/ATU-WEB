@@ -4,11 +4,13 @@ const express    = require("express"),
       Comment    = require("../models/comment"),
       Post       = require("../models/post"),
       Offer      = require("../models/offer"),
+      Favourite  = require("../models/favourite"),
       middleware = require("../middleware/index"),
       async      = require("async"),
       multer     = require('multer'),
       router     = express.Router();
 
+const { Store } = require("express-session");
 const { storage, cloudinary } = require('../cloudinary');
 const offer = require("../models/offer");
 const upload = multer({ storage });
@@ -184,8 +186,21 @@ router.get("/myprofile", middleware.isLogin , async (req, res) => {
   res.render('./info/myprofile');
 });
 
-router.get("/favourites", middleware.isLogin, (req, res) => {
-  res.render("/favoriler");
+router.get("/favourites", middleware.isLogin, async (req, res) => {
+  const favourites = await Favourite.find({ user: req.user });
+  console.log(favourites);
+  res.render("./info/favoriler", { favourites });
+});
+
+router.get("/favourite/store/:id", middleware.isLogin, async (req, res) => {
+  const id = req.params.id;
+  const store = await User.findOne( { _id: id } );
+  const fav = new Favourite({
+    user: req.user,
+    product: store
+  });
+  await fav.save();
+  res.redirect("/stores");
 });
 
 // edit profile PUT: route
@@ -274,10 +289,6 @@ router.get("/store/:id", async (req, res) => {
     console.log(error.message);
     res.redirect("back");
   }
-});
-
-router.get("/favoriler", (req,res) => {
-  res.render('./info/favoriler');
 });
 
 module.exports = router;
