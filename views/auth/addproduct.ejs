@@ -1,0 +1,104 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- define links -->
+    <link rel="stylesheet" href="/css/addproduct.css">
+    <!-- import Bootstrap 5-->
+    <link rel="stylesheet" href="/sources/bootstrap.css">
+    <title>Ürün Ekle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/kayıtol.css">
+</head>
+<body>
+<div class="container">
+    <div class=" text-center mt-5 ">
+        <h1>Ürün Ekleme Formu</h1>
+    </div>
+    <div class="row ">
+        <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+                <div class="card-body bg-light">
+                    <div class="container">
+                        <form id="contact-form" role="form" action="/addproduct" method="POST" enctype="multipart/form-data">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> 
+                                            <label for="form_name">Ürün Adı *</label> 
+                                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Ürün Adı Giriniz" required="required" data-error="Firstname is required."> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_need1">Ürün Kategorisi</label> 
+                                            <select id="form_need1" name="category" class="form-control" required="required" data-error="Please specify your need.">
+                                                <option value="" selected disabled>Kategori Seçiniz</option>
+                                                <option value="Akü">Akü</option>
+                                                <option value="Araç Yağı">Araç Yağı</option>
+                                                <option value="Alarm">Alarm</option>
+                                                <option value="Lastik">Lastik</option>
+                                                <option value="Müzik Sistemi">Müzik Sistemi</option>
+                                                <option value="Cam Filmi">Cam Filmi</option>
+                                            </select>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> 
+                                            <label for="form_number">Ürün Fiyatı *</label> 
+                                            <input id="form_number" type="number" name="price" class="form-control" placeholder="Fiyat Belirleyiniz" required="required" data-error="Number is required." min="1" max="30000"> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> 
+                                            <label for="form_number1">Stok Adeti *</label> 
+                                            <input id="form_number1" type="number" name="stock" class="form-control" placeholder="Adet Giriniz " required="required" data-error="Lastname is required."> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> 
+                                            <label for="form_number2">Kargoya Veriliş Süresi *</label> 
+                                            <input id="form_number2" type="number" name="kargoDay" class="form-control" placeholder="Gün Giriniz " required="required" data-error="Valid email is required."min="1" max="15"> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <form action="/action_page.php">
+                                            <label for="myfile">Fotoğrafı yükleyin:</label>
+                                            <input type="file" id="myfile" name="productImages" multiple>
+                                            <br><br>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group"> 
+                                            <label for="form_message">Ürün Açıklaması *</label> 
+                                            <textarea id="form_message" name="description" class="form-control" placeholder="Ürün Açıklaması Giriniz" rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+                                    </div>
+                                    <div class="col-md-12 d-flex justify-content-center"> <input type="submit" class="btn btn-primary btn-send pt-2 btn-block " value="Ürünü Ekle"> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+
+
+
+<%- include ('../partails/footer') -%>

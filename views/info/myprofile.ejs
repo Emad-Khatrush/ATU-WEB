@@ -80,6 +80,36 @@
                 </div>
             </div>
         </br>
+        </br>
+
+        <% if( currentUser.userType === "store") { %>
+            <div class="row">
+                <h2> Sosyal Medya Linkleri</h2>
+            </br>
+        </br>
+                <div class="col-md-4">
+                    <div class="form-group"> 
+                        <label for="form_tel">Website</label> 
+                        <input id="form_tel" value="<%= currentUser.website %>" type="text" name="website" class="form-control" data-error="Valid tel is required."> 
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group"> 
+                        <label for="form_text">Facebook link</label> 
+                        <input id="form_text" value="<%= currentUser.facebook %>" type="text" name="facebook" class="form-control" data-error="Valid text is required."> 
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group"> 
+                        <label for="date">Instagram Link</label>
+                        <input id="date" value="<%= currentUser.instagram %>" type="text" name="instagram" class="form-control" data-error="Valid date is required."> 
+                    </div>
+                </div>
+
+            </div>            
+        <% } %> 
 
         <% if( currentUser.userType === "buyer") { %>
             <div class="row">
@@ -87,21 +117,21 @@
                 <div class="col-md-6">
                     <div class="form-group"> 
                         <label for="form_tel">Araç Yılı</label> 
-                        <input id="form_tel" type="tel" name="tel" class="form-control" required="required" data-error="Valid tel is required."> 
+                        <input id="form_tel" value="<%= currentUser.carYear %>" type="number" name="carYear" class="form-control" data-error="Valid tel is required."> 
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group"> 
                         <label for="form_text">Araba Markası</label> 
-                        <input id="form_text" type="text" name="text" class="form-control"  required="required" data-error="Valid text is required."> 
+                        <input id="form_text" value="<%= currentUser.carModel %>" type="text" name="carModel" class="form-control" data-error="Valid text is required."> 
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group"> 
                         <label for="date">Son Bakım Tarihi</label>
-                        <input id="date" type="date" name="date" class="form-control"  required="required" data-error="Valid date is required."  min="2015-01-01" max="2021-06-06"> 
+                        <input id="date" value="<%= currentUser.maintenanceDate %>" type="date" name="maintenanceDate" class="form-control" data-error="Valid date is required."> 
                     </div>
                 </div>
 

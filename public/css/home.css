@@ -17,10 +17,12 @@ header{
     background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.6));
 }
 header .logo{
-    font-size: 2rem;
-    font-weight: 700;
+    width: 177px;
+    height:69px;
     color: #fff;
     float: left;
+    padding-top:-10px;
+    background: url("/assets/images/atu.png");
 }
 header .menu{
     float: right;

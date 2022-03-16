@@ -8,9 +8,11 @@
     <title>Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
 <div class="container">
+    <%- include ('../partails/navbar') -%>
     <div class="row">
         <div class="col-sm-4 ">
             <select class="form-select" name="product" id="product">
@@ -48,14 +50,13 @@
                                     aria-label="Slide 2"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://mcdn01.gittigidiyor.net/65963/tn50/659637149_tn50_0.jpg?1617691" class="img-thumbnail"
-                                     alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://mcdn01.gittigidiyor.net/66113/tn50/661130174_tn50_0.jpg?1617692" class="img-thumbnail"
-                                     alt="...">
-                            </div>
+                            <% product.images.forEach((img, i) => { %>
+                                <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                                    <img src="<%= img.url %> " class="img-thumbnail"
+                                         alt="...">
+                                </div>
+                            <% }); %> 
+                            
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-<%= index %>"
                                     data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -79,44 +80,44 @@
                                     class="fas fa-shipping-fast fa-2x mx-3" title="Hızlı Teslimat"></i></p>
                     </div>
                     <div class="fiyat">
-                        <p class="d-flex justify-content-center"><i class="fas fa-lira-sign fa-2x"><b>252.52</b></i></p>
+                        <p class="d-flex justify-content-center"><i class="fas fa-lira-sign fa-2x"><b><%= product.price %></b></i></p>
                         <del class="d-flex justify-content-center"><i class="fas fa-lira-sign fa-1x"></i><b>340.25</b></del>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg"> Ürün Detayı </button>
                 </div>
             </div>
-        <% }) %> 
-        
-<div class="row">
-    <div class="col-md-12 d-flex justify-content-center footer">
-        <nav aria-label="...">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#">Önceki</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item active" aria-current="page">
-                    <span class="page-link">3</span>
-                </li>
-                <li class="page-item">
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item">
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item">
-                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Sonraki</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
+        <% }) %>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous">
-</script>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center footer">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#">Önceki</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item active" aria-current="page">
+                            <span class="page-link">3</span>
+                        </li>
+                        <li class="page-item">
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item">
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Sonraki</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+                crossorigin="anonymous">
+        </script>
 
 
 <%- include ('../partails/footer') -%>

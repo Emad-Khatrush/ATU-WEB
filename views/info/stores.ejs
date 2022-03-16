@@ -7,7 +7,9 @@
     >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="/css/stores.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/sources/bootstrap.css">
     <title>Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -15,6 +17,8 @@
 </head>
 <body>
 <div class="container">
+    <%- include ('../partails/navbar') -%>
+
     <div class="row">
         <div class="col-sm-4 ">
             <select class="form-select" name="store" id="store">
@@ -46,7 +50,7 @@
             <div class="row g-2">
                     <div class="col-md-4">
                         <img class="card-img-top"
-                            src="https://lh3.googleusercontent.com/hukMQ4A0AQpYz52IHl2M5Ppbbmmh71RwXjuIT6699o4ZPhadhwBMDmZSDDG5nX36xeXdL6Ui=w1080-h608-p-no-v0"
+                            src="<%= store.image.url ? store.image.url : '/assets/images/image/nostore.jpg'%>"
                             alt="...">
                     </div>
                     
@@ -69,7 +73,9 @@
                                     </button>
                                     <i class="fas fa-random fa-lg"></i>
                                     <i class="fas fa-search-plus fa-lg"></i>
-                                    <i class="far fa-heart fa-lg " title="Favorilere Ekle"></i>
+                                    <a href="/favourite/store/<%= store._id %>"> <i id="favori" class="far fa-heart fa-lg " title="Favorilere Ekle"></i> </a>
+                                    
+                                    
                                 </small>
                             </p>
                         </div>
@@ -109,6 +115,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
-
 
 <%- include ('../partails/footer') -%>
